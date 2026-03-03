@@ -10,7 +10,7 @@
     inputs.nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = {
-        inherit user host;
+        inherit user host system;
         fullname = fullnames.${user};
         pkgs-unstable = import inputs.nixpkgs-unstable {
           inherit system;
