@@ -2,25 +2,24 @@
   flake.nixosModules.computer-mo = { ... }: {
     imports = with inputs.self.nixosModules; [
       base
+      brave
+      controller
       desktop
-      singledisk
       gdm
       gdm-mo
-      gnome-apps
       gnome
-      brave
-      onepassword
-      steam
+      gnome-apps
       lact
-      secure-boot
-      sops-nix
       mo
-      controller
+      onepassword
+      secure-boot
+      singledisk
+      sops-nix
+      steam
     ];
-
     home-manager.users.mo.imports = with config.flake.homeModules; [
-      gnome-mo
       base
+      gnome-mo
     ];
   };
 }
