@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.nixosModules.mo = { pkgs, config, .... }: {
+  flake.nixosModules.mo = { pkgs, config, ... }: {
     home-manager.extraSpecialArgs = {};
 
     sops.secrets."users/mo/password" = {
