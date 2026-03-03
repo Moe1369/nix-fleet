@@ -1,5 +1,5 @@
-{ inputs, config, user, ... }: {
-  flake.nixosModules.computer-mo = {
+{ inputs, config, ... }: {
+  flake.nixosModules.computer-mo = { user, ... }: {
     imports = with inputs.self.nixosModules; [
       base
       desktop
