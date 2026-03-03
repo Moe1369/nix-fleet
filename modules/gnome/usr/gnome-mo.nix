@@ -124,6 +124,18 @@
     source = ./wallpaper;
     target = ".local/share/backgrounds";
   };
-
+home.file.".local/share/gnome-background-properties/custom-wallpapers.xml" = {
+  text = ''
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+    <wallpapers>
+      <wallpaper deleted="false">
+        <name>Custom Wallpapers</name>
+        <filename>/home/mo/.local/share/backgrounds</filename>
+        <options>zoom</options>
+      </wallpaper>
+    </wallpapers>
+  '';
+};
   };
 }
