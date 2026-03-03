@@ -1,5 +1,7 @@
 { inputs, ... }: {
   flake.nixosModules.user = { pkgs, user, fullname, ... }: {
+    home-manager.extraSpecialArgs = { inherit user fullname; };
+    
     users.users.${user} = {
       isNormalUser = true;
       description = fullname;
