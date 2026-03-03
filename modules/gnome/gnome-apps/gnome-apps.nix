@@ -5,7 +5,7 @@
        nautilus-python
        sushi
        gnome-text-editor
-       ptyxis
+       gnome-console
        loupe
        cine
    ];
