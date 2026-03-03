@@ -15,6 +15,7 @@
       secure-boot
       sops-nix
       mo
+      controller
     ];
 
     home-manager.users.mo.imports = with config.flake.homeModules; [
