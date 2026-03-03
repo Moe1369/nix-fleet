@@ -1,21 +1,21 @@
 { inputs, config, ... }: {
   flake.nixosModules.computer-mo = { ... }: {
     imports = with inputs.self.nixosModules; [
-      mo
-      base-sys-group
       apps-sys-brave
-      gaming-sys-controller
+      apps-sys-onepassword
+      base-sys-group
       desktop-sys-group
+      disks-sys-singledisk
+      gaming-sys-controller
+      gaming-sys-lact
+      gaming-sys-steam
       gnome-sys-gdm
       gnome-sys-gdm-mo
       gnome-sys-gnome
       gnome-sys-gnome-apps
-      gaming-sys-lact
-      apps-sys-onepassword
+      mo
       security-sys-secureboot
-      disks-sys-singledisk
       security-sys-sopsnix
-      gaming-sys-steam
     ];
     home-manager.users.mo.imports = with config.flake.homeModules; [
       base-usr-group
