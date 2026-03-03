@@ -1,15 +1,12 @@
-{ inputs, ... }: {
-  flake.nixosConfigurations.computer-mo = inputs.nixpkgs.lib.nixosSystem {
-    system = "x86_64-linux";
-    specialArgs = {
+{ inputs, ... }:
+let
+  mkHost = inputs.self.lib.mkHost;
+in
+{
+  flake.nixosConfigurations = {
+    computer-mo = mkHost {
       user = "mo";
-      pkgs-unstable = import inputs.nixpkgs-unstable {
-        system = "x86_64-linux";
-        config.allowUnfree = true;
-      };
+      extraModules = [ inputs.self.nixosModules.computer-mo ];
     };
-    modules = [
-      inputs.self.nixosModules.computer-mo
-    ];
   };
 }
