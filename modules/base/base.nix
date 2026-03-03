@@ -9,6 +9,7 @@
       nix-settings
       security
       shellapps
+      user
       version
       zsh
     ];
