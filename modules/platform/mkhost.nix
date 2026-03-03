@@ -9,6 +9,6 @@
           config.allowUnfree = true;
         };
       };
-      modules = extraModules;
+      modules = [ inputs.self.nixosModules.${host} ] ++ extraModules;
     };
 }
