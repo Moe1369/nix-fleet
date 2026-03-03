@@ -10,6 +10,7 @@
        gnome-console
        loupe
        cine
+       tsukimi
    ];
   };
 }
