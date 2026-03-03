@@ -9,6 +9,8 @@
       gnome
       brave
       onepassword
+      steam
+      lact
     ];
 
     home-manager.users.${user}.imports = with config.flake.homeModules; [
