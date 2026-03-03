@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.nixosModules.deck = { pkgs, config, ... }: {
+  flake.nixosModules.users-sys-deck = { pkgs, config, ... }: {
     home-manager.extraSpecialArgs = {};
 
     sops.secrets."users/deck/password" = {
