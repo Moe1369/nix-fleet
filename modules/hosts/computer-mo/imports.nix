@@ -5,6 +5,7 @@
       desktop
       singledisk
       gdm
+      gdm-mo
       gnome-apps
       gnome
       brave
