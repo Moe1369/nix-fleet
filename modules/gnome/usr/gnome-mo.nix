@@ -119,30 +119,30 @@
         ];
       };
     };
-  home.file.wallpaper = {
-    recursive = true;
-    source = ./wallpaper;
-    target = ".local/share/backgrounds";
-  };
 
-home.file.".local/share/gnome-background-properties/my-wallpapers.xml" = {
-  text = let
-    files = builtins.attrNames (builtins.readDir ./wallpaper);
-    entry = file: ''
-      <wallpaper deleted="false">
-        <name>${file}</name>
-        <filename>/home/mo/.local/share/backgrounds/${file}</filename>
-        <options>zoom</options>
-      </wallpaper>
-    '';
-  in ''
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
-    <wallpapers>
-      ${builtins.concatStringsSep "\n" (map entry files)}
-    </wallpapers>
-  '';
-};
+    home.file.wallpaper = {
+      recursive = true;
+      source = ./wallpaper;
+      target = ".local/share/backgrounds";
+    };
 
+    home.file.".local/share/gnome-background-properties/my-wallpapers.xml" = {
+      text = let
+        files = builtins.attrNames (builtins.readDir ./wallpaper);
+        entry = file: ''
+          <wallpaper deleted="false">
+            <name>${file}</name>
+            <filename>/home/mo/.local/share/backgrounds/${file}</filename>
+            <options>zoom</options>
+          </wallpaper>
+        '';
+      in ''
+        <?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+        <wallpapers>
+          ${builtins.concatStringsSep "\n" (map entry files)}
+        </wallpapers>
+      '';
+    };
   };
 }
