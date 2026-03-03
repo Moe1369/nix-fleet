@@ -1,12 +1,14 @@
 { inputs, ... }:
 let
+  system = "x86_64-linux";
+  user   = "mo";
+  host   = "computer-mo";
+
   mkHost = inputs.self.lib.mkHost;
 in
 {
-  flake.nixosConfigurations = {
-    computer-mo = mkHost {
-      user = "mo";
-      extraModules = [ inputs.self.nixosModules.computer-mo ];
-    };
+  flake.nixosConfigurations.${host} = mkHost {
+    inherit system user host;
+    extraModules = [ inputs.self.nixosModules.${host} ];
   };
 }
