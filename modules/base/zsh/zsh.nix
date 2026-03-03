@@ -10,7 +10,7 @@
     users.defaultUserShell = pkgs.zsh;
   };
 
-  flake.homeManagerModules.zsh = { ... }: {
+  flake.homeModules.zsh = { ... }: {
     home.file.".zshrc".source = ./dotfiles/zsh-config;
   };
 }

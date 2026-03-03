@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.homeManagerModules.git = { user, fullname, ... }: {
+  flake.homeModules.git = { user, fullname, ... }: {
     programs.git = {
       enable = true;
       userName = fullname;

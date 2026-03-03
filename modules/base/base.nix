@@ -15,7 +15,7 @@
     ];
   };
 
-  flake.homeManagerModules.base = { ... }: {
+  flake.homeModules.base = { ... }: {
     imports = with config.flake.homeManagerModules; [
       git
       zsh

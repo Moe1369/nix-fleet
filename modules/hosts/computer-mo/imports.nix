@@ -10,7 +10,7 @@
       brave
     ];
 
-    home-manager.users.${user}.imports = with config.flake.homeManagerModules; [
+    home-manager.users.${user}.imports = with config.flake.homeModules; [
       gnome
     ];
   };
