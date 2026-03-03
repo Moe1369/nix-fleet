@@ -2,7 +2,7 @@
   flake.nixosModules.jovian = { ... }:{
     jovian.steam.enable = true;
     jovian.steam.autoStart = true;
-    #jovian.steam.user = user;
+    jovian.steam.user = deck;
     jovian.steam.desktopSession = "gnome";
   };
 }
