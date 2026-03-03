@@ -13,9 +13,10 @@
       gnome-sys-gdm-mo
       gnome-sys-gnome
       gnome-sys-gnome-apps
-      mo
       security-sys-secureboot
       security-sys-sopsnix
+      users-sys-deck
+      users-sys-mo
     ];
     home-manager.users.mo.imports = with config.flake.homeModules; [
       base-usr-group
