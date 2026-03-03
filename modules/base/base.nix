@@ -9,6 +9,7 @@
       nix-settings
       rtkit
       shellapps
+      sshd
       user
       version
       zsh
