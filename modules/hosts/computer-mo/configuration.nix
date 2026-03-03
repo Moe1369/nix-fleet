@@ -8,6 +8,7 @@
       gdm
       gnome-apps
       gnome
+      mo
     ];
   };
 }
