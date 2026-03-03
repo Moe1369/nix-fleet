@@ -12,6 +12,7 @@
       steam
       lact
       secure-boot
+      sops-nix
     ];
 
     home-manager.users.${user}.imports = with config.flake.homeModules; [
