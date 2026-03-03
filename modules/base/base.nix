@@ -3,8 +3,10 @@
     imports = with inputs.self.nixosModules; [
       boot
       firmware
+      home-manager
       locale
-      networking
+      network
+      nix-settings
       security
       shellapps
       version
