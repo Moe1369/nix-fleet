@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.sshd = { config, user, ... }: {
+  flake.nixosModules.sshd = { config, ... }: {
     services.openssh.enable = true;
 
 #    sops.secrets."users/${user}/intern/public" = {};
