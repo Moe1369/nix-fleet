@@ -8,7 +8,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.url = "github:nix-community/lanzaboote/v1.0.0";
     sops-nix.url = "github:Mic92/sops-nix";
-    sops.nix.inputs.nixpkgs.follows = "nixpkgs";
+    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
   
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; }
