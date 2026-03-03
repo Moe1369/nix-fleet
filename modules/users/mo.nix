@@ -15,7 +15,7 @@
     };
 
     home-manager.users.mo = {
-      home.username = mo;
+      home.username = "mo";
       home.homeDirectory = "/home/mo";
       home.stateVersion = "25.11";
     };
