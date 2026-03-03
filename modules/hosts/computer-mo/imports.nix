@@ -12,6 +12,7 @@
 
     home-manager.users.${user}.imports = with config.flake.homeModules; [
       gnome
+      base
     ];
   };
 }
