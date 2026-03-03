@@ -2,7 +2,7 @@
   flake.nixosModules.user = { pkgs, config, user, fullname, ... }: {
     home-manager.extraSpecialArgs = { inherit user fullname; };
 
-    sops.secrets."users/${user}/password" = {
+    sops.secrets."users/${user}" = {
       neededForUsers = true;
     };
     
