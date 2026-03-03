@@ -7,6 +7,7 @@
       input
       printing
       sound
+      miscapps
     ];
   };
 }
