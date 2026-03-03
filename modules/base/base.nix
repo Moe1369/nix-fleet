@@ -17,7 +17,7 @@
 
   flake.homeModules.base = { ... }: {
     imports = with config.flake.homeModules; [
-      git
+      git-allusers
       zsh-allusers
     ];
   };

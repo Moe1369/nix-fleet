@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.homeModules.git = { ... }: {
+  flake.homeModules.git-allusers = { ... }: {
     programs.git = {
       enable = true;
       settings.user.name = "Mohamed Chrayed";

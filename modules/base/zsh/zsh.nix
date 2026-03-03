@@ -9,8 +9,4 @@
     programs.zsh.ohMyZsh.theme = "agnoster";
     users.defaultUserShell = pkgs.zsh;
   };
-
-  flake.homeModules.zsh-allusers = { ... }: {
-    home.file.".zshrc".source = ./dotfiles/zsh-config;
-  };
 }
