@@ -6,7 +6,6 @@
        sushi
        gnome-text-editor
        ptyxis
-       gnome-terminal
        loupe
        cine
    ];
