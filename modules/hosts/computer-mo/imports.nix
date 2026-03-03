@@ -13,6 +13,7 @@
       lact
       secure-boot
       sops-nix
+      mo
     ];
 
     home-manager.users.${user}.imports = with config.flake.homeModules; [
