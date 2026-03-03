@@ -5,7 +5,7 @@
     sops.secrets."users/${user}/password" = {
       neededForUsers = true;
     };
-    
+    users.mutableUsers = false;     
     users.users.${user} = {
       isNormalUser = true;
       description = fullname;
