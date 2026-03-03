@@ -1,22 +1,22 @@
 { inputs, ... }: {
-  flake.nixosModules.user = { pkgs, config, user, fullname, ... }: {
-    home-manager.extraSpecialArgs = { inherit user fullname; };
+  flake.nixosModules.mo = { pkgs, config }: {
+    home-manager.extraSpecialArgs = {};
 
-    sops.secrets."users/${user}/password" = {
+    sops.secrets."users/mo/password" = {
       neededForUsers = true;
     };
     users.mutableUsers = false;     
-    users.users.${user} = {
+    users.users.mo = {
       isNormalUser = true;
       description = fullname;
       extraGroups = [ "networkmanager" "wheel" "video" "audio" ];
       shell = pkgs.zsh;
-      hashedPasswordFile = config.sops.secrets."users/${user}/password".path;
+      hashedPasswordFile = config.sops.secrets."users/mo/password".path;
     };
 
-    home-manager.users.${user} = {
+    home-manager.users.mo = {
       home.username = user;
-      home.homeDirectory = "/home/${user}";
+      home.homeDirectory = "/home/mo";
       home.stateVersion = "25.11";
     };
   };
