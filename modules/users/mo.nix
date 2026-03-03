@@ -8,14 +8,14 @@
     users.mutableUsers = false;     
     users.users.mo = {
       isNormalUser = true;
-      description = fullname;
+      description = "Mohamed Chrayed";
       extraGroups = [ "networkmanager" "wheel" "video" "audio" ];
       shell = pkgs.zsh;
       hashedPasswordFile = config.sops.secrets."users/mo/password".path;
     };
 
     home-manager.users.mo = {
-      home.username = user;
+      home.username = mo;
       home.homeDirectory = "/home/mo";
       home.stateVersion = "25.11";
     };

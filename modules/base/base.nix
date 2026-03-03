@@ -10,7 +10,6 @@
       rtkit
       shellapps
       sshd
-      user
       version
       zsh
     ];
