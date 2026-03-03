@@ -8,7 +8,7 @@
       gnome-apps
       gnome
       brave
-      1password
+      onepassword
     ];
 
     home-manager.users.${user}.imports = with config.flake.homeModules; [
