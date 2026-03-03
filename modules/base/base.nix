@@ -7,7 +7,7 @@
       locale
       network
       nix-settings
-      security
+      rtkit
       shellapps
       user
       version

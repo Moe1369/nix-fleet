@@ -11,6 +11,7 @@
       onepassword
       steam
       lact
+      secure-boot
     ];
 
     home-manager.users.${user}.imports = with config.flake.homeModules; [
