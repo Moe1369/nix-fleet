@@ -119,5 +119,11 @@
         ];
       };
     };
+  home.file.wallpaper = {
+    recursive = true;
+    source = ./wallpaper;
+    target = "~/.local/share/backgrounds";
+  };
+
   };
 }
