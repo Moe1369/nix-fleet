@@ -7,7 +7,6 @@
       gdm
       gnome-apps
       gnome
-      mo
     ];
 
     home-manager.users.${user}.imports = with config.flake.homeManagerModules; [
