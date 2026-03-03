@@ -19,7 +19,7 @@
     ];
 
     home-manager.users.mo.imports = with config.flake.homeModules; [
-      gnome
+      gnome-mo
       base
     ];
   };

@@ -6,7 +6,7 @@
     services.gnome.games.enable = false;
   };
 
-  flake.homeModules.gnome = { ... }: {
+  flake.homeModules.gnome-mo = { ... }: {
     dconf.settings = {
       "org/gnome/shell/keybindings" = {
         focus-active-notification = [];
