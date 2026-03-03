@@ -7,6 +7,7 @@
       gdm
       gnome-apps
       gnome
+      brave
     ];
 
     home-manager.users.${user}.imports = with config.flake.homeManagerModules; [
