@@ -1,5 +1,5 @@
 { inputs, config, ... }: {
-  flake.nixosModules.computer-mo = { user, ... }: {
+  flake.nixosModules.computer-mo = { ... }: {
     imports = with inputs.self.nixosModules; [
       base
       desktop
@@ -16,7 +16,7 @@
       mo
     ];
 
-    home-manager.users.${user}.imports = with config.flake.homeModules; [
+    home-manager.users.mo.imports = with config.flake.homeModules; [
       gnome
       base
     ];
