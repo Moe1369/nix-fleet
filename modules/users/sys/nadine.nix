@@ -5,7 +5,7 @@
       neededForUsers = true;
     };
     users.mutableUsers = false;     
-    users.users.mo = {
+    users.users.nadine = {
       isNormalUser = true;
       description = "Nadine Peukert";
       extraGroups = [ "networkmanager" "wheel" "video" "audio" ];
