@@ -13,6 +13,9 @@
             backupFileExtension = "backup";
             backupCommand = "rm";
             overwriteBackup = true;
+            sharedModules = [
+              inputs.sops-nix.homeManagerModules.sops  # 👈 this
+            ];
           };
         }
       )
