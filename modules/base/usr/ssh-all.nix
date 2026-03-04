@@ -12,5 +12,15 @@
     sops.secrets."ssh/extern/private" = {
       path = "${config.home.homeDirectory}/.ssh/extern";
     };
+    programs.ssh.matchBlocks = {
+      "intern" = {
+        host = "*";
+        identityFile = "${config.home.homeDirectory}/.ssh/intern";
+      };
+      "extern" = {
+        host = "*";
+        identityFile = "${config.home.homeDirectory}/.ssh/extern";
+      };
+    };    
   };
 }
