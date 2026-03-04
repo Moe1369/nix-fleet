@@ -14,6 +14,7 @@
        tsukimi
        papers
        gnomeExtensions.auto-accent-colour
+       gnomeExtensions.appindicator
        gnomeExtensions.clipboard-indicator
        gnomeExtensions.rounded-window-corners-reborn
        gnomeExtensions.night-theme-switcher
