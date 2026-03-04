@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.base-sys-boot = {lib, ... }:{
+  flake.nixosModules.base-sys-boot = { ... }:{
     boot.loader.systemd-boot.enable = true;
     boot.loader.systemd-boot.consoleMode = "max";
     boot.loader.efi.canTouchEfiVariables = true;
