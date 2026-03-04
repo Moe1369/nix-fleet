@@ -11,8 +11,8 @@
     boot.plymouth.enable = true;
     boot.plymouth.theme = "bgrt";
     boot.initrd.luks.devices."cryptroot" = {
-      device = "/dev/disk/by-label/luks";
+      #device = "/dev/disk/by-label/luks";
+      crypttabExtraOpts = [ "tpm2-device=auto" ];
     };
-
   };
 }
