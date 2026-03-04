@@ -1,5 +1,5 @@
 { ... }: {
-  flake.homeModules.gnome-usr-gnome-mo = { config, ... }: {
+  flake.homeModules.gnome-usr-gnome-mo = { config, pkgs, ... }: {
     xdg.userDirs = {
       enable = true;
       createDirectories = true;
