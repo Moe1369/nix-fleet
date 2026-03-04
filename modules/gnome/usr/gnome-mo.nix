@@ -118,6 +118,9 @@
       };
       "org/gnome/shell" = {
         enabled-extensions = [
+          "clipboard-indicator@tudmotu.com"
+          "nightthemeswitcher@romainvigier.fr"
+          "rounded-window-corners@fxgn"
           "tinted-shell@pakovm"
         ];
       };
