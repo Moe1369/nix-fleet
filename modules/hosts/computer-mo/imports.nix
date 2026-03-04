@@ -21,6 +21,7 @@
     home-manager.users.mo.imports = with config.flake.homeModules; [
       base-usr-group
       gnome-usr-gnome-mo
+      security-usr-sopsnix
     ];
   };
 }
