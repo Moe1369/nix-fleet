@@ -13,6 +13,7 @@
        decibels
        tsukimi
        papers
+       gnomeExtensions.auto-accent-colour
        gnomeExtensions.clipboard-indicator
        gnomeExtensions.rounded-window-corners-reborn
        gnomeExtensions.night-theme-switcher
