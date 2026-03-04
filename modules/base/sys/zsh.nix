@@ -9,7 +9,8 @@
     programs.zsh.ohMyZsh.theme = "agnoster";
     users.defaultUserShell = pkgs.zsh;
     programs.zsh.shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake git+https://gitea.chrayed.de/Chrayed/nix-fleet#${host}";
+      update = "sudo nix flake update --flake git+https://gitea.chrayed.de/Chrayed/nix-fleet";
+      rebuild = "sudo nixos-rebuild switch --refresh --flake git+https://gitea.chrayed.de/Chrayed/nix-fleet#${host}";
     };
   };
 }
