@@ -19,6 +19,7 @@
     imports = with config.flake.homeModules; [
       base-usr-git-all
       base-usr-zsh-all
+      base-usr-ssh-all
     ];
   };
 }
