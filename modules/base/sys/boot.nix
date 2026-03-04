@@ -10,9 +10,5 @@
     boot.initrd.systemd.enable = true;
     boot.plymouth.enable = true;
     boot.plymouth.theme = "bgrt";
-    boot.initrd.luks.devices."cryptroot" = {
-    device = lib.mkForce "/dev/nvme0n1p2";
-      #crypttabExtraOpts = [ "tpm2-device=auto" ];
-    };
   };
 }

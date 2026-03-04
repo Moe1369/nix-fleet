@@ -1,6 +1,7 @@
 { ... }: {
-  flake.nixosModules.disks-sys-singledisk = { inputs, ... }:{
+  flake.nixosModules.disks-sys-singledisk = { inputs, ... }: {
     imports = [ inputs.disko.nixosModules.disko ];
+
     disko.devices = {
       disk = {
         main = {
@@ -44,5 +45,9 @@
       device = "/var/lib/swapfile";
       size = 16 * 1024;
     }];
+
+    boot.initrd.luks.devices."cryptroot" = {
+      device = lib.mkForce "/dev/nvme0n1p2";
+    };
   };
 }
