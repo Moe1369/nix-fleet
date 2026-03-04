@@ -10,9 +10,9 @@
     boot.initrd.systemd.enable = true;
     boot.plymouth.enable = false;
     #boot.plymouth.theme = "bgrt";
-    #boot.initrd.luks.devices."cryptroot" = {
-    #device = "/dev/disk/by-label/luks";
+    boot.initrd.luks.devices."cryptroot" = {
+    device = "/dev/nvme0n1p2";
       #crypttabExtraOpts = [ "tpm2-device=auto" ];
-    #};
+    };
   };
 }
