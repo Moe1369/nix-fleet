@@ -3,7 +3,6 @@
      environment.systemPackages = with pkgs-unstable; [
        adw-gtk3
        refine
-       gdm-settings
        nautilus
        nautilus-python
        sushi
