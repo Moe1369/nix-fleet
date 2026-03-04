@@ -1,5 +1,6 @@
 { ... }: {
   flake.nixosModules.disks-sys-singledisk = {
+    imports = [ inputs.disko.nixosModules.disko ];
     disko.devices = {
       disk = {
         main = {
