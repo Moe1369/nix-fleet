@@ -3,6 +3,7 @@
   flake.nixosModules.base-sys-hm = {
     imports = [
       inputs.home-manager.nixosModules.home-manager
+      inputs.sops-nix.homeManagerModules.sops
       (
         { lib, ... }:
         {
