@@ -4,6 +4,6 @@
 
     environment.systemPackages = [ pkgs.age pkgs.sops ];
 
-    sops.defaultSopsFile = ./secrets/secrets.yaml;
+    sops.defaultSopsFile = ../secrets/secrets.yaml;
   };
 }
