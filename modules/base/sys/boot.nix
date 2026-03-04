@@ -7,7 +7,12 @@
     boot.consoleLogLevel = 0;
     boot.initrd.verbose = false;
     boot.initrd.enable = true;
+    boot.initrd.systemd.enable = true;
     boot.plymouth.enable = true;
     boot.plymouth.theme = "bgrt";
+    boot.initrd.luks.devices."cryptroot" = {
+      device = "/dev/disk/by-label/luks";
+    };
+
   };
 }
