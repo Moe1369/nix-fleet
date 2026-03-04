@@ -10,7 +10,7 @@
       description = "Nadine Peukert";
       extraGroups = [ "networkmanager" "wheel" "video" "audio" ];
       shell = pkgs.zsh;
-      hashedPasswordFile = config.sops.secrets."users/mo/password".path;
+      hashedPasswordFile = config.sops.secrets."users/nadine/password".path;
     };
 
     home-manager.users.nadine = {

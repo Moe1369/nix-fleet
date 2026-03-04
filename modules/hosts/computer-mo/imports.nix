@@ -16,6 +16,7 @@
       security-sys-secureboot
       security-sys-sopsnix
       users-sys-mo
+      users-sys-nadine
     ];
     home-manager.users.mo.imports = with config.flake.homeModules; [
       base-usr-group
