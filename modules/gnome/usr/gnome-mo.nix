@@ -1,5 +1,17 @@
 { ... }: {
   flake.homeModules.gnome-usr-gnome-mo = { ... }: {
+    xdg.userDirs = {
+      enable = true;
+      createDirectories = true;
+      desktop = "${config.home.homeDirectory}/Schreibtisch";
+      download = "${config.home.homeDirectory}/Downloads";
+      templates = "${config.home.homeDirectory}/Vorlagen";
+      publicShare = "${config.home.homeDirectory}/Öffentlich";
+      documents = "${config.home.homeDirectory}/Dokumente";
+      music = "${config.home.homeDirectory}/Musik";
+      pictures = "${config.home.homeDirectory}/Bilder";
+      videos = "${config.home.homeDirectory}/Videos";
+    };
     dconf.settings = {
       "org/gnome/shell/keybindings" = {
         focus-active-notification = [];
