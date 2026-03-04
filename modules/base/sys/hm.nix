@@ -3,7 +3,6 @@
   flake.nixosModules.base-sys-hm = {
     imports = [
       inputs.home-manager.nixosModules.home-manager
-      inputs.sops-nix.homeManagerModules.sops
       (
         { lib, ... }:
         {
@@ -14,6 +13,10 @@
             backupFileExtension = "backup";
             backupCommand = "rm";
             overwriteBackup = true;
+            sharedModules = [
+              inputs.sops-nix.homeManagerModules.sops
+            ];
+
           };
         }
       )
