@@ -10,15 +10,10 @@
        gnome-console
        loupe
        cine
+       decibels
        tsukimi
-       
-       
-       
-       
-       
-       
-       gnomeExtensions.copyous
-       
+       papers
+       ignition
    ];
   };
 }

@@ -109,13 +109,6 @@
       };
       "org/gnome/shell" = {
         enabled-extensions = [
-          "light-style@gnome-shell-extensions.gcampax.github.com"
-          "clipboard-indicator@tudmotu.com"
-          "AlphabeticalAppGrid@stuarthayhurst"
-          "rounded-window-corners@fxgn"
-          "appindicatorsupport@rgcjonas.gmail.com"
-          "nightthemeswitcher@romainvigier.fr"
-          "azwallpaper@azwallpaper.gitlab.com"
         ];
       };
     };
