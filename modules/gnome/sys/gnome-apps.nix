@@ -11,6 +11,14 @@
        loupe
        cine
        tsukimi
+       
+       
+       
+       
+       
+       
+       gnomeExtensions.copyous
+       
    ];
   };
 }
