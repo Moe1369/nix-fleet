@@ -13,12 +13,9 @@
        decibels
        tsukimi
        papers
-       ignition
-
-
-
-
-
+       gnomeExtensions.clipboard-indicator
+       gnomeExtensions.rounded-window-corners-reborn
+       gnomeExtensions.night-theme-switcher
        gnomeExtensions.tinted-shell
    ];
   };

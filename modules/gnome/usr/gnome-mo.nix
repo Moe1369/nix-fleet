@@ -107,9 +107,6 @@
       "org/gnome/shell/extensions/clipboard-indicator" = {
         toggle-menu = ["<Super>V"];
       };
-      "org/gnome/shell/extensions/azwallpaper" = {
-        slideshow-use-absolute-time-for-duration = true;
-      };
       "org/gnome/desktop/background" = {
         color-shading-type = "solid";
         picture-options = "zoom";
@@ -121,6 +118,7 @@
       };
       "org/gnome/shell" = {
         enabled-extensions = [
+          "tinted-shell@pakovm"
         ];
       };
     };
