@@ -8,6 +8,8 @@
       nil
       yaml-language-server
       tree
+      nixd
+      fastfetch
     ];
   };
 }
