@@ -9,6 +9,7 @@
     lanzaboote.url = "github:nix-community/lanzaboote/v1.0.0";
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+    disko.url = "github:nix-community/disko";
   };
   
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; }
