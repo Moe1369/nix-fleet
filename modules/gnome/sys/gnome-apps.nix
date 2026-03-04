@@ -14,6 +14,12 @@
        tsukimi
        papers
        ignition
+
+
+
+
+
+       gnomeExtensions.tinted-shell
    ];
   };
 }
