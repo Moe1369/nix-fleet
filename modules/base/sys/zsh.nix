@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.base-sys-zsh = { pkgs, ... }: {
+  flake.nixosModules.base-sys-zsh = { pkgs, host, ... }: {
     programs.zsh.enable = true;
     programs.zsh.enableCompletion = true;
     programs.zsh.syntaxHighlighting.enable = true;
@@ -8,5 +8,8 @@
     programs.zsh.ohMyZsh.enable = true;
     programs.zsh.ohMyZsh.theme = "agnoster";
     users.defaultUserShell = pkgs.zsh;
+    programs.zsh.shellAliases = {
+      rebuild = "sudo nixos-rebuild switch --flake git+https://gitea.chrayed.de/Chrayed/nix-fleet#${host}";
+    };
   };
 }
