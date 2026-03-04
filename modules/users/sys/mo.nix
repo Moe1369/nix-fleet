@@ -1,9 +1,6 @@
 { inputs, ... }: {
   flake.nixosModules.users-sys-mo = { pkgs, config, ... }: {
-    home-manager.extraSpecialArgs = {
-      homeDirectory = "/home/mo";
-    };
-
+  
     sops.secrets."users/mo/password" = {
       neededForUsers = true;
     };
