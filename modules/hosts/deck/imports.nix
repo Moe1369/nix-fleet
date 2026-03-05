@@ -1,5 +1,5 @@
 { inputs, config, ... }: {
-  flake.nixosModules.computer-deck = { ... }: {
+  flake.nixosModules.deck = { ... }: {
     imports = with inputs.self.nixosModules; [
       apps-sys-chrome
       apps-sys-vesktop
