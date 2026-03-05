@@ -20,6 +20,7 @@
       security-sys-secureboot
       security-sys-sopsnix
       users-sys-mo
+      hypervisor-sys-virtualization
     ];
     home-manager.users.mo.imports = with config.flake.homeModules; [
       apps-usr-onepassword-all
