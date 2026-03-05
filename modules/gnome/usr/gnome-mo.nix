@@ -120,6 +120,7 @@
           "appindicatorsupport@rgcjonas.gmail.com"
           "auto-accent-colour@Wartybix"
           "clipboard-indicator@tudmotu.com"
+          "middleclickclose@paolo.tranquilli.gmail.com"
           "nightthemeswitcher@romainvigier.fr"
           "rounded-window-corners@fxgn"
           "tinted-shell@pakovm"
