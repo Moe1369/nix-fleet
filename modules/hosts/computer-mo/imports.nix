@@ -3,6 +3,7 @@
     imports = with inputs.self.nixosModules; [
       apps-sys-brave
       apps-sys-onepassword
+      apps-sys-teams
       base-sys-group
       desktop-sys-group
       disks-sys-singledisk
