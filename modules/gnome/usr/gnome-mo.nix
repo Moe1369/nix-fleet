@@ -12,16 +12,6 @@
       pictures = "${config.home.homeDirectory}/Bilder";
       videos = "${config.home.homeDirectory}/Videos";
     };
-    home.file.".config/autostart/1password.desktop" = {
-      text = ''
-        [Desktop Entry]
-        Name=1Password
-        Exec=${pkgs._1password-gui}/bin/1password --silent %U
-        Terminal=false
-        Type=Application
-        Icon=1password
-      '';
-    };
     dconf.settings = {
       "moe/tsukimi" = {
         accent-color-code = "rgb(46,194,126)";
