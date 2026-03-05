@@ -9,10 +9,6 @@
       gaming-sys-controller
       gaming-sys-lact
       gaming-sys-steam
-      gnome-sys-gdm
-      gnome-sys-gdm-nadine
-      gnome-sys-gnome
-      gnome-sys-gnome-apps
       security-sys-secureboot
       security-sys-sopsnix
       users-sys-nadine
@@ -21,7 +17,6 @@
       apps-usr-vesktop-all
       base-usr-group
       gaming-usr-steam-all
-      gnome-usr-gnome-nadine
       security-usr-sopsnix
     ];
   };
