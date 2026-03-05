@@ -10,6 +10,7 @@
       disks-sys-singledisk
       gaming-sys-controller
       gaming-sys-lact
+      gaming-sys-nexusmods
       gaming-sys-steam
       gnome-sys-gdm
       gnome-sys-gdm-mo
