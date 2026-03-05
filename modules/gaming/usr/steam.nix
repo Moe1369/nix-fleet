@@ -31,7 +31,7 @@
 	Comment[tr]=Steam üzerinden oyun oynama ve düzenleme uygulaması
 	Comment[uk]=Програма для керування іграми та запуску ігор у Steam
 	Comment[vi]=Ứng dụng để quản lý và chơi trò chơi trên Steam
-	Exec=steam %U
+	Exec=steam -silent %U
 	Icon=steam
 	Terminal=false
 	Type=Application
