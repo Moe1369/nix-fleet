@@ -15,6 +15,8 @@
     plasma-manager.url = "github:nix-community/plasma-manager";
     plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.inputs.home-manager.follows = "home-manager";
+    jovian-nixos.url = "github:Jovian-Experiments/Jovian-NixOS";
+    jovian-nixos.inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
   
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; }
