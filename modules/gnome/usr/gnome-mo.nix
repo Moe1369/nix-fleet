@@ -12,21 +12,6 @@
       pictures = "${config.home.homeDirectory}/Bilder";
       videos = "${config.home.homeDirectory}/Videos";
     };
-    dconf.settings = {
-      "moe/tsukimi" = {
-        accent-color-code = "rgb(46,194,126)";
-        is-auto-select-server = true;
-        is-fullscreen = false;
-        is-maximized = false;
-        mpv-audio-preferred-lang = 1;
-        mpv-show-buffer-speed = true;
-        mpv-subtitle-font = "Normal";
-        mpv-subtitle-preferred-lang = 1;
-        music-repeat-mode = "none";
-        preferred-server = "Emby";
-        window-height = 672;
-        window-width = 971;
-      };
       "org/gnome/shell/keybindings" = {
         focus-active-notification = [];
         open-new-window-application-1 = [];
