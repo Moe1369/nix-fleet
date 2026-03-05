@@ -19,6 +19,7 @@
       users-sys-mo
     ];
     home-manager.users.mo.imports = with config.flake.homeModules; [
+      apps-usr-onepassword-all
       base-usr-group
       gnome-usr-gnome-mo
       security-usr-sopsnix
