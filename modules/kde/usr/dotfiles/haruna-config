@@ -1,0 +1,13 @@
+[Audio]
+PreferredLanguage=ger,de,eng,en,jap,ja
+
+[General]
+AppendVideoToSingleInstance=true
+ShowPreviewThumbnail=true
+UseSingleInstance=true
+
+[Playback]
+UseHWDecoding=true
+
+[Subtitles]
+PreferredLanguage=ger,de,eng,en,jap,ja

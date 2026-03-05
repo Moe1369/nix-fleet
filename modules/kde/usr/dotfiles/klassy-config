@@ -1,0 +1,8 @@
+[TitleBarSpacing]
+TitleAlignment=AlignLeft
+
+[Windeco]
+ButtonIconStyle=StyleRedmond11
+ButtonShape=ShapeIntegratedRoundedRectangleGrouped
+RoundBottomCornersWhenNoBorders=true
+WindowCornerRadius=3

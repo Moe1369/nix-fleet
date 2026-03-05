@@ -1,0 +1,15 @@
+[2ade3df0-3c0b-4f75-bc22-ccfc46b21de9]
+Description=Fenster-Einstellungen für vesktop
+clientmachine=localhost
+decocolor=BreezeDark
+decocolorrule=2
+title=• Discord | #nixos | Nix/NixOS (unofficial)
+types=1
+windowrole=browser-window
+windowrolematch=1
+wmclass=vesktop
+wmclassmatch=1
+
+[General]
+count=1
+rules=2ade3df0-3c0b-4f75-bc22-ccfc46b21de9

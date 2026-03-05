@@ -1,5 +1,7 @@
-{ ... }: {
-  flake.nixosModules.kde-sys-plasma-apps = { pkgs, pkgs-unstable, ... }: {
+{ ... }:
+{
+  flake.nixosModules.kde-sys-plasma-apps = { pkgs, pkgs-unstable, ... }:
+  {
     environment.systemPackages = with pkgs; [
       kdePackages.kate
       kdePackages.isoimagewriter
@@ -19,10 +21,9 @@
       kdePackages.partitionmanager
       kdePackages.plasma-browser-integration
       pywal
-    ];
-    environment.systemPackages = with pkgs-unstable; [
+    ] ++ (with pkgs-unstable; [
       klassy
-      python3.14-kde-material-you-colors
-    ];
+      python314Packages.kde-material-you-colors
+    ]);
   };
 }
