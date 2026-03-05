@@ -11,6 +11,7 @@
       gaming-sys-controller
       gaming-sys-lact
       gaming-sys-nexusmods
+      gaming-sys-osu
       gaming-sys-steam
       gnome-sys-gdm
       gnome-sys-gdm-mo
