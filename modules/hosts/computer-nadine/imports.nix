@@ -9,6 +9,9 @@
       gaming-sys-controller
       gaming-sys-lact
       gaming-sys-steam
+      kde-sys-plasma
+      kde-sys-plasma-apps
+      kde-sys-sddm-nadine
       security-sys-secureboot
       security-sys-sopsnix
       users-sys-nadine
@@ -17,6 +20,7 @@
       apps-usr-vesktop-all
       base-usr-group
       gaming-usr-steam-all
+      kde-usr-plasma-nadine
       security-usr-sopsnix
     ];
   };
