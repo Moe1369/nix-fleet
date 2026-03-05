@@ -1,5 +1,5 @@
 { ... }: {
-  flake.homeModules.apps-usr-1password = { config, pkgs, ... }: {
+  flake.homeModules.apps-usr-onepassword-all = { config, pkgs, ... }: {
     home.file.".config/autostart/1password.desktop" = {
       text = ''
         [Desktop Entry]
