@@ -4,6 +4,7 @@
        dconf-editor
        adw-gtk3
        refine
+       resources
        nautilus
        nautilus-python
        sushi
@@ -14,6 +15,7 @@
        decibels
        tsukimi
        papers
+       keypunch
        gnomeExtensions.auto-accent-colour
        gnomeExtensions.appindicator
        gnomeExtensions.clipboard-indicator
