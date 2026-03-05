@@ -1,6 +1,6 @@
 { ... }: {
   flake.homeModules.gaming-usr-steam-all = { config, pkgs, ... }: {
-    home.file.".config/autostart/vesktop.desktop" = {
+    home.file.".config/autostart/steam.desktop" = {
       text = ''
         [Desktop Entry]
 	Name=Steam
