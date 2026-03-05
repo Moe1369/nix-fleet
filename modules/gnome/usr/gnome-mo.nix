@@ -12,6 +12,7 @@
       pictures = "${config.home.homeDirectory}/Bilder";
       videos = "${config.home.homeDirectory}/Videos";
     };
+    home.file."Code/.directory".source = ./dotfiles/code-folder;
     dconf.settings = {
       "org/gnome/shell/keybindings" = {
         focus-active-notification = [];
