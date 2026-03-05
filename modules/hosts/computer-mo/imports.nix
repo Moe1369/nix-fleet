@@ -23,6 +23,7 @@
       apps-usr-onepassword-all
       apps-usr-vesktop-all
       base-usr-group
+      gaming-usr-steam-all
       gnome-usr-gnome-mo
       security-usr-sopsnix
     ];
