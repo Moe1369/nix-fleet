@@ -19,6 +19,7 @@
        gnomeExtensions.rounded-window-corners-reborn
        gnomeExtensions.night-theme-switcher
        gnomeExtensions.tinted-shell
+       gnomeExtensions.middle-click-to-close-in-overview
    ];
   };
 }
