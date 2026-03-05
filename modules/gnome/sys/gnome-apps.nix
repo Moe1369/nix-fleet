@@ -16,6 +16,8 @@
        tsukimi
        papers
        keypunch
+       baobab
+       gnome-disk-utility
        gnomeExtensions.auto-accent-colour
        gnomeExtensions.appindicator
        gnomeExtensions.clipboard-indicator
