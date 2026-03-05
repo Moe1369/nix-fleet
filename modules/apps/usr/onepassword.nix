@@ -4,7 +4,7 @@
       text = ''
         [Desktop Entry]
         Name=1Password
-        Exec=1password --silent %U
+        Exec=${pkgs._1password-gui}/bin/1password --silent %U
         Terminal=false
         Type=Application
         Icon=1password
