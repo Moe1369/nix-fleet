@@ -1,5 +1,5 @@
 { inputs, config, ... }: {
-  flake.nixosModules.computer-mo = { ... }: {
+  flake.nixosModules.computer-nadine = { ... }: {
     imports = with inputs.self.nixosModules; [
       apps-sys-chrome
       apps-sys-vesktop
@@ -17,7 +17,7 @@
       security-sys-sopsnix
       users-sys-nadine
     ];
-    home-manager.users.mo.imports = with config.flake.homeModules; [
+    home-manager.users.nadine.imports = with config.flake.homeModules; [
       apps-usr-vesktop-all
       base-usr-group
       gaming-usr-steam-all
