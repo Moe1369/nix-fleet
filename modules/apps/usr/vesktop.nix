@@ -1,6 +1,6 @@
 { ... }: {
   flake.homeModules.apps-usr-vesktop-all = { config, pkgs, ... }: {
-    home.file.".config/autostart/1password.desktop" = {
+    home.file.".config/autostart/vesktop.desktop" = {
       text = ''
         [Desktop Entry]
         Type=Application
