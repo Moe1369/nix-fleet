@@ -10,4 +10,5 @@
         Icon=1password
       '';
     };
+  };
 }
