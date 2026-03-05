@@ -12,6 +12,7 @@
       pictures = "${config.home.homeDirectory}/Bilder";
       videos = "${config.home.homeDirectory}/Videos";
     };
+    dconf.settings = {
       "org/gnome/shell/keybindings" = {
         focus-active-notification = [];
         open-new-window-application-1 = [];
