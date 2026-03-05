@@ -1,6 +1,7 @@
 { ... }: {
   flake.nixosModules.gnome-sys-gnome-apps = { pkgs-unstable, ...}:{
      environment.systemPackages = with pkgs-unstable; [
+       dconf-editor
        adw-gtk3
        refine
        nautilus
