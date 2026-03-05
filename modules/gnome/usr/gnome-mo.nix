@@ -119,7 +119,7 @@
       "org/gnome/shell" = {
         enabled-extensions = [
           "appindicatorsupport@rgcjonas.gmail.com"
-          "auto-accent-colour@Wartybix"
+          #"auto-accent-colour@Wartybix"
           "clipboard-indicator@tudmotu.com"
           "middleclickclose@paolo.tranquilli.gmail.com"
           "nightthemeswitcher@romainvigier.fr"
