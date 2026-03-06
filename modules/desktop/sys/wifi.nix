@@ -2,7 +2,6 @@
   flake.nixosModules.desktop-sys-wifi = { config, ... }: {
     sops.secrets."infrastructure/wifi/ssid" = {};
     sops.secrets."infrastructure/wifi/password" = {};
-
     networking.networkmanager = {
       ensureProfiles = {
         environmentFiles = [
@@ -12,7 +11,7 @@
         profiles = {
           "home" = {
             connection = { id = "home"; type = "wifi"; autoconnect = true; };
-            wifi = { mode = "infrastructure"; ssid = "$WIFI_SSID"; };
+            wifi = { mode = "infrastructure"; ssid = "$WIFI_SSID"; hidden = true; };
             wifi-security = {
               key-mgmt = "wpa-psk";
               psk = "$WIFI_PASSWORD";

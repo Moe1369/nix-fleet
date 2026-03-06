@@ -8,6 +8,7 @@
       desktop-sys-printing
       desktop-sys-sound
       desktop-sys-miscapps
+      desktop-sys-wifi
     ];
   };
 }
