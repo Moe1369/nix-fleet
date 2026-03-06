@@ -13,6 +13,17 @@
       videos = "${config.home.homeDirectory}/Videos";
     };
     home.file."Code/.directory".source = ./dotfiles/code-folder;
+    home.file.".config/gtk-3.0/bookmarks".text = ''
+      file:///home/mo/Bilder Bilder
+      file:///home/mo/Code Code
+      file:///home/mo/Dokumente Dokumente
+      file:///home/mo/Downloads Downloads
+      file:///home/mo/Musik Musik
+      file:///home/mo/%C3%96ffentlich Öffentlich
+      file:///home/mo/Schreibtisch Schreibtisch
+      file:///home/mo/Videos Videos
+      file:///home/mo/Vorlagen Vorlagen
+   '';
     dconf.settings = {
       "org/gnome/shell/keybindings" = {
         focus-active-notification = [];
