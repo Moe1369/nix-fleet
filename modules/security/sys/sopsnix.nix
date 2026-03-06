@@ -9,6 +9,8 @@
     sops.age.keyFile = "/var/lib/sops/root-keys/master-host.txt";
     systemd.tmpfiles.rules = [
       "d /var/lib/sops/root-keys 0700 root root -"
+      "d /var/lib/sops/user-keys 0750 root users -"
+      "f /var/lib/sops/user-keys/master-user.txt 0640 root users -"
      ];
   };
 }
