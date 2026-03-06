@@ -22,7 +22,6 @@
       apps-usr-vesktop-all
       base-usr-group
       gaming-usr-steam-all
-      gnome-usr-gnome-mo
       kde-usr-plasma-deck
       security-usr-sopsnix
     ];
