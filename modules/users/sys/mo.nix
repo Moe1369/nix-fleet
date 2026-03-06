@@ -4,6 +4,11 @@
     sops.secrets."users/mo/password" = {
       neededForUsers = true;
     };
+    sops.secrets."ssh/intern/public" = {
+      owner = "mo";
+      path = "/home/mo/.ssh/authorized_keys";
+      mode = "0600";
+    };
     users.mutableUsers = false;     
     users.users.mo = {
       isNormalUser = true;
@@ -12,7 +17,6 @@
       shell = pkgs.zsh;
       hashedPasswordFile = config.sops.secrets."users/mo/password".path;
     };
-
     home-manager.users.mo = {
       home.username = "mo";
       home.homeDirectory = "/home/mo";
