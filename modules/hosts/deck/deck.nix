@@ -13,9 +13,8 @@
       disks-sys-singledisk-deck
       gaming-sys-controller
       gaming-sys-jovian
-      kde-sys-plasma
-      kde-sys-plasma-apps
-      kde-sys-sddm-deck
+      gnome-sys-gnome
+      gnome-sys-gnome-apps
       security-sys-sopsnix
       users-sys-deck
     ];
@@ -23,6 +22,7 @@
       apps-usr-vesktop-all
       base-usr-group
       gaming-usr-steam-all
+      gnome-usr-gnome-mo
       kde-usr-plasma-deck
       security-usr-sopsnix
     ];
