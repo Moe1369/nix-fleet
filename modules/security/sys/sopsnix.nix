@@ -5,6 +5,7 @@
     sops.defaultSopsFile = ../secrets/secrets.yaml;
     sops.age.sshKeyPaths = [];
     sops.gnupg.sshKeyPaths = [];
+    environment.variables.SOPS_AGE_KEY_FILE = "/var/lib/sops/root-keys/master-host.txt";
     sops.age.keyFile = "/var/lib/sops/root-keys/master-host.txt";
     systemd.tmpfiles.rules = [
       "d /var/lib/sops/root-keys 0700 root root -"
