@@ -14,15 +14,18 @@
       path = "${config.home.homeDirectory}/.ssh/extern";
       mode = "0600";
     };
-    programs.ssh.matchBlocks = {
-      "intern" = {
-        host = "*";
-        identityFile = "${config.home.homeDirectory}/.ssh/intern";
+    programs.ssh = {
+      enable = true;
+      matchBlocks = {
+        "intern" = {
+          host = "*";
+          identityFile = "${config.home.homeDirectory}/.ssh/intern";
+        };
+        "extern" = {
+          host = "*";
+          identityFile = "${config.home.homeDirectory}/.ssh/extern";
+        };
       };
-      "extern" = {
-        host = "*";
-        identityFile = "${config.home.homeDirectory}/.ssh/extern";
-      };
-    };    
+    };
   };
 }
