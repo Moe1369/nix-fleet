@@ -18,6 +18,7 @@
       gaming-sys-nexusmods
       gaming-sys-osu
       gaming-sys-steam
+      gaming-sys-sunshine
       gnome-sys-gdm
       gnome-sys-gdm-mo
       gnome-sys-gnome
