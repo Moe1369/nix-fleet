@@ -13,8 +13,9 @@
       disks-sys-singledisk-deck
       gaming-sys-controller
       gaming-sys-jovian
-      gnome-sys-gnome
-      gnome-sys-gnome-apps
+      kde-sys-plasma
+      kde-sys-plasma-apps
+      kde-sys-sddm-deck
       security-sys-sopsnix
       users-sys-deck
     ];
