@@ -10,7 +10,7 @@
       apps-sys-vesktop
       base-sys-group
       desktop-sys-group
-      disks-sys-singledisk
+      disks-sys-singledisk-encrypted
       gaming-sys-controller
       gaming-sys-lact
       gaming-sys-steam

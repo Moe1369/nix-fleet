@@ -1,7 +1,6 @@
 { ... }: {
-  flake.nixosModules.disks-sys-singledisk = { inputs, lib, ... }: {
+  flake.nixosModules.disks-sys-singledisk-unencrypted = { inputs, ... }: {
     imports = [ inputs.disko.nixosModules.disko ];
-
     disko.devices = {
       disk = {
         main = {
@@ -11,7 +10,7 @@
             type = "gpt";
             partitions = {
               ESP = {
-                size = "512M";
+                size = "1024M";
                 type = "EF00";
                 content = {
                   type = "filesystem";
@@ -21,18 +20,13 @@
                   extraArgs = [ "-n" "boot" ];
                 };
               };
-              luks = {
+              root = {
                 size = "100%";
                 content = {
-                  type = "luks";
-                  name = "cryptroot";
-                  settings.allowDiscards = true;
-                  content = {
-                    type = "filesystem";
-                    format = "xfs";
-                    mountpoint = "/";
-                    extraArgs = [ "-L" "root" ];
-                  };
+                  type = "filesystem";
+                  format = "xfs";
+                  mountpoint = "/";
+                  extraArgs = [ "-L" "root" ];
                 };
               };
             };
@@ -40,14 +34,9 @@
         };
       };
     };
-
     swapDevices = [{
       device = "/var/lib/swapfile";
       size = 16 * 1024;
     }];
-
-    boot.initrd.luks.devices."cryptroot" = {
-      device = lib.mkForce "/dev/nvme0n1p2";
-    };
   };
 }
