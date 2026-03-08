@@ -3,6 +3,20 @@
   flake.homeModules.kde-usr-plasma-nadine = { config, ... }:
   {
     imports = [ inputs.plasma-manager.homeModules.plasma-manager ];
+    
+    xdg.userDirs = {
+      enable = true;
+      createDirectories = true;
+      desktop = "${config.home.homeDirectory}/Schreibtisch";
+      download = "${config.home.homeDirectory}/Downloads";
+      templates = "${config.home.homeDirectory}/Vorlagen";
+      publicShare = "${config.home.homeDirectory}/Öffentlich";
+      documents = "${config.home.homeDirectory}/Dokumente";
+      music = "${config.home.homeDirectory}/Musik";
+      pictures = "${config.home.homeDirectory}/Bilder";
+      videos = "${config.home.homeDirectory}/Videos";
+    };
+    
     home.file."Code/.directory".source = ./dotfiles/code-folder;
     home.file.".config/haruna/haruna.conf".source = ./dotfiles/haruna-config;
     home.file.".local/share/user-places.xbel".source = ./dotfiles/userplaces-computer-nadine;
