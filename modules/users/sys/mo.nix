@@ -9,6 +9,11 @@
       path = "/home/mo/.ssh/authorized_keys";
       mode = "0600";
     };
+    
+    systemd.tmpfiles.rules = [
+      "d /home/mo/.ssh 0700 mo users -"
+    ];
+
     users.mutableUsers = false;     
     users.users.mo = {
       isNormalUser = true;
