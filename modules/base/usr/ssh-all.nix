@@ -16,14 +16,13 @@
     };
     programs.ssh = {
       enable = true;
+      enableDefaultConfig = false;
       matchBlocks = {
-        "intern" = {
-          host = "*";
-          identityFile = "${config.home.homeDirectory}/.ssh/intern";
-        };
-        "extern" = {
-          host = "*";
-          identityFile = "${config.home.homeDirectory}/.ssh/extern";
+        "*" = {
+          identityFile = [
+            "${config.home.homeDirectory}/.ssh/intern"
+            "${config.home.homeDirectory}/.ssh/extern"
+          ];
         };
       };
     };
