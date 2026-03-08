@@ -23,7 +23,7 @@
       pywal
     ] ++ (with pkgs-unstable; [
       klassy
-      python314Packages.kde-material-you-colors
+      #python314Packages.kde-material-you-colors
     ]);
   };
 }
