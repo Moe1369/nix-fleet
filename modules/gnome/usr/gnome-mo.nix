@@ -47,9 +47,9 @@
         magnifier-zoom-out = [];
       };
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-        command = ["kgx --tab"];
-        binding = ["<Super>Return"];
-        name = ["Console"];
+        command = "kgx --tab";
+        binding = "<Super>Return";
+        name = "Console";
       };
       "org/gnome/desktop/wm/keybindings" = {
         activate-window-menu = [];
