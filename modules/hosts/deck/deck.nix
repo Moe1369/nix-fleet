@@ -10,12 +10,12 @@
       apps-sys-vesktop
       base-sys-group
       desktop-sys-group
-      disks-sys-singledisk-unencrypted
+      disks-sys-singledisk-encrypted
       gaming-sys-controller
       gaming-sys-jovian
       kde-sys-plasma
       kde-sys-plasma-apps
-      kde-sys-sddm-deck
+      security-sys-secureboot
       security-sys-sopsnix
       users-sys-deck
     ];
