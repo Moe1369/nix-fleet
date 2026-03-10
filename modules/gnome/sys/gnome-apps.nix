@@ -1,6 +1,6 @@
 { ... }: {
-  flake.nixosModules.gnome-sys-gnome-apps = { pkgs-unstable, ...}:{
-     environment.systemPackages = with pkgs-unstable; [
+  flake.nixosModules.gnome-sys-gnome-apps = { pkgs, ...}:{
+     environment.systemPackages = with pkgs; [
        dconf-editor
        adw-gtk3
        refine
