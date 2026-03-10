@@ -1,7 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
     home-manager.url = "github:nix-community/home-manager/master";
@@ -16,7 +15,7 @@
     plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.inputs.home-manager.follows = "home-manager";
     jovian-nixos.url = "github:Jovian-Experiments/Jovian-NixOS";
-    jovian-nixos.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    jovian-nixos.inputs.nixpkgs.follows = "nixpkgs";
   };
   
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; }
