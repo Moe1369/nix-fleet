@@ -21,9 +21,7 @@
       kdePackages.partitionmanager
       kdePackages.plasma-browser-integration
       pywal
-    ] ++ (with pkgs-unstable; [
       klassy
-      #python314Packages.kde-material-you-colors
-    ]);
+    ];
   };
 }

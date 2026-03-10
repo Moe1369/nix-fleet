@@ -1,6 +1,6 @@
 { ... }: {
-  flake.nixosModules.desktop-sys-fonts = { pkgs-unstable, ... }: {
-    environment.systemPackages = with pkgs-unstable; [
+  flake.nixosModules.desktop-sys-fonts = { pkgs, ... }: {
+    environment.systemPackages = with pkgs; [
       ibm-plex
       adwaita-fonts
     ];
