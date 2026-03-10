@@ -9,7 +9,7 @@
     jovian.steam.autoStart = true;
     jovian.devices.steamdeck.enable = true; 
     jovian.steam.user = "deck";
-    jovian.steam.desktopSession = "plasma";
+    jovian.steam.desktopSession = "gnome";
     services.displayManager.sddm.wayland.enable = true;
   };
 }
