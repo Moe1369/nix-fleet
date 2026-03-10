@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.gaming-sys-steam = { pkgs-unstable, ... }: {
+  flake.nixosModules.gaming-sys-steam = { pkgs, ... }: {
     programs.steam = {
       enable = true;
       extest.enable = true;
