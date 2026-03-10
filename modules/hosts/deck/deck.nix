@@ -13,8 +13,8 @@
       disks-sys-singledisk-unencrypted
       gaming-sys-controller
       gaming-sys-jovian
-      kde-sys-plasma
-      kde-sys-plasma-apps
+      gnome-sys-gnome
+      gnome-sys-gnome-apps
       security-sys-sopsnix
       users-sys-deck
     ];
@@ -22,7 +22,7 @@
       apps-usr-vesktop-all
       base-usr-group
       gaming-usr-steam-all
-      kde-usr-plasma-deck
+      gnome-usr-gnome-deck
       security-usr-sopsnix
     ];
 
