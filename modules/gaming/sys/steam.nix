@@ -14,8 +14,6 @@
        };
       extraCompatPackages = with pkgs-unstable; [
         proton-ge-bin
-      ];
-      extraPackages = with pkgs-unstable; [
         gamescope
         mangohud
       ];
