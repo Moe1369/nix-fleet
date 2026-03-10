@@ -3,7 +3,7 @@
     programs.steam = {
       enable = true;
       extest.enable = true;
-      package = pkgs-unstable.steam.override {
+      package = pkgs.steam.override {
         extraEnv = {
           GAMEMODERUN = "1";
           PROTON_ENABLE_WAYLAND = "1";
