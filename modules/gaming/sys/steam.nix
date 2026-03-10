@@ -12,7 +12,7 @@
           DXIL_SPIRV_CONFIG = "wmma_rdna3_workaround"; 
          };
        };
-      extraCompatPackages = with pkgs-unstable; [
+      extraCompatPackages = with pkgs; [
         proton-ge-bin
         gamescope
         mangohud
