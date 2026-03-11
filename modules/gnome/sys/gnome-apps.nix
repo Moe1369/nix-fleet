@@ -20,6 +20,7 @@
        gnome-disk-utility
        gnomeExtensions.auto-accent-colour
        gnomeExtensions.appindicator
+       gnomeExtensions.caffeine
        gnomeExtensions.clipboard-indicator
        gnomeExtensions.rounded-window-corners-reborn
        gnomeExtensions.night-theme-switcher
