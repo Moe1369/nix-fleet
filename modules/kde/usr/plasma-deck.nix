@@ -2,6 +2,14 @@
 {
   flake.homeModules.kde-usr-plasma-deck = { config, ... }:
   {
+  
+    xdg.desktopEntries."return-to-gaming-mode" = {
+      name = "Spielmodus";
+      exec = "qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logout";
+      icon = "steam";
+      terminal = false;
+      categories = [ "Game" ];
+    };
     imports = [ inputs.plasma-manager.homeModules.plasma-manager ];
     home.file."Code/.directory".source = ./dotfiles/code-folder;
     home.file.".config/haruna/haruna.conf".source = ./dotfiles/haruna-config;
