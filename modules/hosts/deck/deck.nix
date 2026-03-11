@@ -24,6 +24,7 @@
       apps-usr-vesktop-all
       base-usr-group
       gaming-usr-steam-all
+      gaming-usr-jovian-all
       kde-usr-plasma-deck
       security-usr-sopsnix
     ];
