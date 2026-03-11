@@ -9,13 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pull-requests: write
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@main
-      - uses: DeterminateSystems/flake-checker-action@main
-      - uses: DeterminateSystems/update-flake-lock@main
-        with:
-          pr-title: "flake: update inputs"
-          pr-labels: |
-            dependencies
+      - name: Update flake inputs
+        run: nix flake update
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add flake.lock
+          git commit -m "flake: update inputs" || echo "No changes to commit"
+          git push
