@@ -8,17 +8,14 @@ jobs:
   update:
     runs-on: ubuntu-latest
     permissions:
-      contents: write       # needed to push the branch
-      pull-requests: write  # needed to create the PR
+      contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@main
-      - name: Update flake inputs
-        run: nix flake update
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+      - uses: DeterminateSystems/flake-checker-action@main
+      - uses: DeterminateSystems/update-flake-lock@main
         with:
-          commit-message: "flake: update inputs"
-          title: "flake: update inputs"
-          branch: flake-update
-          delete-branch: true
+          pr-title: "flake: update inputs"
+          pr-labels: |
+            dependencies
