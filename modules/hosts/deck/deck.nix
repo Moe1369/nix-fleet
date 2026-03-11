@@ -11,8 +11,8 @@
       base-sys-group
       desktop-sys-group
       disks-sys-singledisk-unencrypted
-      gaming-sys-controller
-      gaming-sys-jovian
+#      gaming-sys-controller
+#      gaming-sys-jovian
       gnome-sys-gnome
       gnome-sys-gnome-apps
       platform-sys-cache
@@ -22,7 +22,7 @@
     home-manager.users.deck.imports = with config.flake.homeModules; [
       apps-usr-vesktop-all
       base-usr-group
-      gaming-usr-steam-all
+#      gaming-usr-steam-all
       gnome-usr-gnome-deck
       security-usr-sopsnix
     ];
