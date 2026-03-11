@@ -1,17 +1,20 @@
 name: Update flake inputs
 on:
   schedule:
-    - cron: '30 3 * * 0'  # every Sunday at 3:30
-  workflow_dispatch:      # allow manual trigger
+    - cron: '30 3 * * 0'
+  workflow_dispatch:
+
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write       # needed to push the branch
+      pull-requests: write  # needed to create the PR
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@main
       - name: Update flake inputs
         run: nix flake update
-
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
