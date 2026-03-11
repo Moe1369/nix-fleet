@@ -11,8 +11,8 @@
       base-sys-group
       desktop-sys-group
       disks-sys-singledisk-unencrypted
-#      gaming-sys-controller
-#      gaming-sys-jovian
+      gaming-sys-controller
+      gaming-sys-jovian
       gnome-sys-gnome
       gnome-sys-gnome-apps
       platform-sys-cache
