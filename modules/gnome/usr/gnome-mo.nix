@@ -121,6 +121,10 @@
         border-width = -2;
         skip-libadwaita-app = false;
       };
+      "org/gnome/shell/extensions/caffeine" = {
+        enable-mpris = true;
+        show-notifications = false;
+      };
       "org/gnome/shell/extensions/clipboard-indicator" = {
         toggle-menu = ["<Super>V"];
       };
@@ -137,6 +141,7 @@
         enabled-extensions = [
           "appindicatorsupport@rgcjonas.gmail.com"
           #"auto-accent-colour@Wartybix"
+          "caffeine@patapon.info"
           "clipboard-indicator@tudmotu.com"
           "middleclickclose@paolo.tranquilli.gmail.com"
           "nightthemeswitcher@romainvigier.fr"
