@@ -24,6 +24,7 @@
       gnome-sys-gdm-mo
       gnome-sys-gnome
       gnome-sys-gnome-apps
+      platform-sys-cache
       security-sys-secureboot
       security-sys-sopsnix
       users-sys-mo
