@@ -15,6 +15,7 @@
       gaming-sys-jovian
       gnome-sys-gnome
       gnome-sys-gnome-apps
+      platform-sys-cache
       security-sys-sopsnix
       users-sys-deck
     ];
