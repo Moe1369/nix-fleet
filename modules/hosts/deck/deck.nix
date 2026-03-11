@@ -16,6 +16,7 @@
       kde-sys-plasma
       kde-sys-plasma-apps
       platform-sys-cache
+      platform-sys-upgrades
       security-sys-sopsnix
       users-sys-deck
     ];

@@ -18,6 +18,7 @@
       kde-sys-plasma-apps
       kde-sys-sddm-nadine
       platform-sys-cache
+      platform-sys-upgrades
       security-sys-secureboot
       security-sys-sopsnix
       users-sys-nadine
