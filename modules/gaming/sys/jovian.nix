@@ -11,5 +11,7 @@
     jovian.steam.user = "deck";
     jovian.steam.desktopSession = "gnome";
     services.displayManager.sddm.wayland.enable = true;
+    programs.steam.enable = true;
+    programs.steam.extest.enable = true;
   };
 }
