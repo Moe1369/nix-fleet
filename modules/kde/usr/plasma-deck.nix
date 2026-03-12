@@ -34,6 +34,7 @@
         "First Use" = false;
         "Open" = true;
       };
+    };
 
       workspace = {
         wallpaperSlideShow.path = "${config.home.homeDirectory}/Bilder/Hintergründe";
