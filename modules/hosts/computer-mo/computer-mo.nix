@@ -44,5 +44,6 @@
     boot.kernelParams = [ "quiet" "splash" "boot.shell_on_fail" "loglevel=3" "rd.systemd.show_status=false" "rd.udev.log_level=3" "udev.log_priority=3" ];
     nixpkgs.hostPlatform = system;
     hardware.cpu.amd.updateMicrocode = true;
+    networking.interfaces."enp11s0".wakeOnLan.enable = true;
   };
 }
