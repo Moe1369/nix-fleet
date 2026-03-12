@@ -46,6 +46,5 @@
     hardware.cpu.amd.updateMicrocode = true;
     networking.interfaces."enp11s0".wakeOnLan.enable = true;
     networking.interfaces."wlp10s0".wakeOnLan.enable = true;
-    services.ratbagd.enable = true;
   };
 }
