@@ -6,7 +6,7 @@
         Type=Application
         Name=Vesktop
         Comment=Vesktop autostart script
-        Exec=${pkgs.vesktop}/bin/vesktop --enable-speech-dispatcher --silent
+        Exec=${pkgs.vesktop}/bin/vesktop --enable-speech-dispatcher --start-minimized
         StartupNotify=false
         Terminal=false
         Icon=vesktop
