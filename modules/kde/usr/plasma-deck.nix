@@ -27,14 +27,6 @@
     programs.plasma = {
       enable = true;
       immutableByDefault = false;
-      configFile."kwalletrc" = {
-        "Wallet" = {
-        "Close When Idle" = false;
-        "Enabled" = true;
-        "First Use" = false;
-        "Open" = true;
-      };
-    };
 
       workspace = {
         wallpaperSlideShow.path = "${config.home.homeDirectory}/Bilder/Hintergründe";
