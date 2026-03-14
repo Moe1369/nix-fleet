@@ -10,6 +10,7 @@
        sushi
        gnome-text-editor
        gnome-console
+       gnome-calculator
        loupe
        cine
        decibels
