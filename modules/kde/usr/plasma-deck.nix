@@ -3,7 +3,20 @@
   flake.homeModules.kde-usr-plasma-deck = { config, ... }:
   {
   
-    home.file."Desktop/Spielmodus.desktop".text = ''
+    xdg.userDirs = {
+      enable = true;
+      createDirectories = true;
+      desktop = "${config.home.homeDirectory}/Schreibtisch";
+      download = "${config.home.homeDirectory}/Downloads";
+      templates = "${config.home.homeDirectory}/Vorlagen";
+      publicShare = "${config.home.homeDirectory}/Öffentlich";
+      documents = "${config.home.homeDirectory}/Dokumente";
+      music = "${config.home.homeDirectory}/Musik";
+      pictures = "${config.home.homeDirectory}/Bilder";
+      videos = "${config.home.homeDirectory}/Videos";
+    };
+    
+    home.file."Schreibtisch/Spielmodus.desktop".text = ''
       [Desktop Entry]
       Name=Spielmodus
       Exec=qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logout
@@ -12,6 +25,7 @@
       Type=Application
       Categories=Game;
     '';
+
     imports = [ inputs.plasma-manager.homeModules.plasma-manager ];
     home.file."Code/.directory".source = ./dotfiles/code-folder;
     home.file.".config/haruna/haruna.conf".source = ./dotfiles/haruna-config;
@@ -68,7 +82,7 @@
           location = "bottom";
           floating = true;
           alignment = "center";
-          height = 46;
+          height = 48;
           lengthMode = "fit";
           hiding = "dodgewindows";
           widgets = [
