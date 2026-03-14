@@ -10,6 +10,7 @@
       tree
       nixd
       fastfetch
+      ranger
     ];
   };
 }
