@@ -1,5 +1,7 @@
 { ... }: {
-  flake.nixosModules.gaming-sys-steam = { pkgs, millennium-steam, ... }: {
+  flake.nixosModules.gaming-sys-steam = { pkgs, inputs, ... }: {
+    nixpkgs.overlays = [ inputs.millennium.overlays.default ];
+
     programs.steam = {
       enable = true;
       extest.enable = true;
