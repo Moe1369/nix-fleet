@@ -2,6 +2,7 @@
   flake.nixosModules.gaming-sys-steam = { pkgs, ... }: {
     programs.steam = {
       enable = true;
+      package = pkgs.millennium-steam;
       extest.enable = true;
       package = pkgs.steam.override {
         extraEnv = {
