@@ -16,7 +16,7 @@
     plasma-manager.inputs.home-manager.follows = "home-manager";
     jovian-nixos.url = "github:Jovian-Experiments/Jovian-NixOS";
     jovian-nixos.inputs.nixpkgs.follows = "nixpkgs";
-    inputs.millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+    millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
   };
   
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; }
