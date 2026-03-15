@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.gaming-sys-steam = { pkgs, millennium, ... }: {
+  flake.nixosModules.gaming-sys-steam = { pkgs, millennium-steam, ... }: {
     programs.steam = {
       enable = true;
       extest.enable = true;
