@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.apps-sys-vesktop-all = { pkgs, ... }: {
+  flake.nixosModules.apps-sys-vesktop = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
       vesktop
     ];
