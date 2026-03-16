@@ -6,7 +6,7 @@
     programs.zsh.autosuggestions.enable = true;
     programs.zsh.autosuggestions.async = true;
     programs.zsh.ohMyZsh.enable = true;
-    programs.zsh.ohMyZsh.theme = "agnoster";
+    programs.zsh.ohMyZsh.theme = "edvardm";
     users.defaultUserShell = pkgs.zsh;
     programs.zsh.shellAliases = {
       rebuild-from-gitea = "sudo nixos-rebuild switch --refresh --flake git+https://gitea.chrayed.de/Chrayed/nix-fleet#${host}";
