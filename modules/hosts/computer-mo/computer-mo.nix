@@ -9,7 +9,7 @@
       apps-sys-brave
       apps-sys-libreoffice
       apps-sys-onepassword
-      apps-sys-teams
+      #apps-sys-teams
       apps-sys-vesktop
       base-sys-group
       desktop-sys-group

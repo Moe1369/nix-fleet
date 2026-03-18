@@ -18,6 +18,7 @@
        papers
        keypunch
        baobab
+       turnon
        gnome-disk-utility
        gnomeExtensions.auto-accent-colour
        gnomeExtensions.appindicator
