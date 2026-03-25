@@ -19,6 +19,8 @@
        keypunch
        baobab
        turnon
+       blanket
+       impression
        gnome-disk-utility
        gnomeExtensions.auto-accent-colour
        gnomeExtensions.appindicator
