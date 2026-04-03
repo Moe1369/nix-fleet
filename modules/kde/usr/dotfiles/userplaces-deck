@@ -15,7 +15,7 @@
    <GroupState-SearchFor-IsHidden>false</GroupState-SearchFor-IsHidden>
   </metadata>
  </info>
- <bookmark href="file:///home/mo">
+ <bookmark href="file:///home/deck">
   <title>Home</title>
   <info>
    <metadata owner="http://freedesktop.org">
@@ -27,7 +27,7 @@
    </metadata>
   </info>
  </bookmark>
- <bookmark href="file:///home/mo/Schreibtisch">
+ <bookmark href="file:///home/deck/Desktop">
   <title>Desktop</title>
   <info>
    <metadata owner="http://freedesktop.org">
@@ -40,7 +40,7 @@
    </metadata>
   </info>
  </bookmark>
- <bookmark href="file:///home/mo/Bilder">
+ <bookmark href="file:///home/deck/Bilder">
   <title>Pictures</title>
   <info>
    <metadata owner="http://freedesktop.org">
@@ -52,7 +52,7 @@
    </metadata>
   </info>
  </bookmark>
- <bookmark href="file:///home/mo/Code">
+ <bookmark href="file:///home/deck/Code">
   <title>Code</title>
   <info>
    <metadata owner="http://freedesktop.org">
@@ -63,7 +63,7 @@
    </metadata>
   </info>
  </bookmark>
- <bookmark href="file:///home/mo/Dokumente">
+ <bookmark href="file:///home/deck/Dokumente">
   <title>Documents</title>
   <info>
    <metadata owner="http://freedesktop.org">
@@ -75,7 +75,7 @@
    </metadata>
   </info>
  </bookmark>
- <bookmark href="file:///home/mo/Downloads">
+ <bookmark href="file:///home/deck/Downloads">
   <title>Downloads</title>
   <info>
    <metadata owner="http://freedesktop.org">
@@ -87,7 +87,7 @@
    </metadata>
   </info>
  </bookmark>
- <bookmark href="file:///home/mo/Musik">
+ <bookmark href="file:///home/deck/Musik">
   <title>Music</title>
   <info>
    <metadata owner="http://freedesktop.org">
@@ -99,7 +99,7 @@
    </metadata>
   </info>
  </bookmark>
- <bookmark href="file:///home/mo/%C3%96ffentlich">
+ <bookmark href="file:///home/deck/%C3%96ffentlich">
   <title>Öffentlich</title>
   <info>
    <metadata owner="http://freedesktop.org">
@@ -110,7 +110,7 @@
    </metadata>
   </info>
  </bookmark>
- <bookmark href="file:///home/mo/Desktop">
+ <bookmark href="file:///home/deck/Desktop">
   <title>Desktop</title>
   <info>
    <metadata owner="http://freedesktop.org">
@@ -121,7 +121,7 @@
    </metadata>
   </info>
  </bookmark>
- <bookmark href="file:///home/mo/Videos">
+ <bookmark href="file:///home/deck/Videos">
   <title>Videos</title>
   <info>
    <metadata owner="http://freedesktop.org">
@@ -133,7 +133,7 @@
    </metadata>
   </info>
  </bookmark>
- <bookmark href="file:///home/mo/Vorlagen">
+ <bookmark href="file:///home/deck/Vorlagen">
   <title>Vorlagen</title>
   <info>
    <metadata owner="http://freedesktop.org">

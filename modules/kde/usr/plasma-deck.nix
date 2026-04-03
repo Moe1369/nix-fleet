@@ -6,7 +6,7 @@
     xdg.userDirs = {
       enable = true;
       createDirectories = true;
-      desktop = "${config.home.homeDirectory}/Schreibtisch";
+      desktop = "${config.home.homeDirectory}/Desktop";
       download = "${config.home.homeDirectory}/Downloads";
       templates = "${config.home.homeDirectory}/Vorlagen";
       publicShare = "${config.home.homeDirectory}/Öffentlich";
