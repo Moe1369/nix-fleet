@@ -7,6 +7,7 @@
   flake.nixosModules.computer-nadine = { system, ... }: {
     imports = with inputs.self.nixosModules; [
       apps-sys-chrome
+      apps-sys-libreoffice
       apps-sys-vesktop
       base-sys-group
       desktop-sys-group
