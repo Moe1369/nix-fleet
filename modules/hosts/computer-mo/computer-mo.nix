@@ -22,10 +22,9 @@
       gaming-sys-osu
       gaming-sys-steam
       gaming-sys-sunshine
-      gnome-sys-gdm
-      gnome-sys-gdm-mo
-      gnome-sys-gnome
-      gnome-sys-gnome-apps
+      kde-sys-plasma
+      kde-sys-plasma-apps
+      kde-sys-sddm-mo
       platform-sys-cache
       platform-sys-upgrades
       security-sys-secureboot
