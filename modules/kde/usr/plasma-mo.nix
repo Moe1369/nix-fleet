@@ -19,7 +19,7 @@
     imports = [ inputs.plasma-manager.homeModules.plasma-manager ];
     home.file."Code/.directory".source = ./dotfiles/code-folder;
     home.file.".config/haruna/haruna.conf".source = ./dotfiles/haruna-config;
-    home.file.".local/share/user-places.xbel".source = ./dotfiles/userplaces-mo;
+    home.file.".local/share/user-places.xbel".source = ./dotfiles/userplaces-computer-mo;
     home.file.".config/kde-material-you-colors/config.conf".source = ./dotfiles/kmyc-config;
     home.file.".config/autostart/kde-material-you-colors.desktop".source = ./dotfiles/kmyc-desktop;
     home.file.wallpaper = {
