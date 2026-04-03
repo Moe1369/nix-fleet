@@ -64,7 +64,7 @@
         small = { family = "Adwaita Sans"; pointSize = 8; weight = "normal"; };
         toolbar = { family = "Adwaita Sans"; pointSize = 10; weight = "normal"; };
         fixedWidth = { family = "Adwaita Mono"; pointSize = 11; weight = "normal"; };
-        windowTitle = { family = "Adwaita Sans"; pointSize = 12; weight = "normal"; };
+        windowTitle = { family = "Adwaita Sans"; pointSize = 11; weight = "normal"; };
       };
 
       panels = [
