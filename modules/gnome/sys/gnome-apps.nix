@@ -26,6 +26,7 @@
        gnomeExtensions.appindicator
        gnomeExtensions.caffeine
        gnomeExtensions.clipboard-indicator
+       gnomeExtensions.fly-pie
        gnomeExtensions.rounded-window-corners-reborn
        gnomeExtensions.night-theme-switcher
        gnomeExtensions.tinted-shell
