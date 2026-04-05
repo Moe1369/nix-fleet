@@ -8,8 +8,6 @@
     imports = with inputs.self.nixosModules; [
       apps-sys-brave
       apps-sys-libreoffice
-      apps-sys-newelle
-      apps-sys-ollama
       apps-sys-onepassword
       #apps-sys-teams
       apps-sys-vesktop
