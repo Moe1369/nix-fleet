@@ -144,7 +144,7 @@
    </metadata>
   </info>
  </bookmark>
- <bookmark href="sftp://administrator@server.chrayed.home/data">
+ <bookmark href="sftp://administrator@server.chrayed.home/var/home/administrator">
   <title>Daten</title>
   <info>
    <metadata owner="http://freedesktop.org">
