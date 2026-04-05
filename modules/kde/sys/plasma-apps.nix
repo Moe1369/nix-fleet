@@ -3,6 +3,7 @@
   flake.nixosModules.kde-sys-plasma-apps = { pkgs, pkgs-unstable, ... }:
   {
     environment.systemPackages = with pkgs; [
+      adwaita-fonts
       kdePackages.kate
       kdePackages.isoimagewriter
       kdePackages.gwenview
