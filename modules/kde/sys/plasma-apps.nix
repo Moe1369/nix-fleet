@@ -22,8 +22,8 @@
       kdePackages.partitionmanager
       kdePackages.plasma-browser-integration
       klassy
-      kostek-pkgs.kde-material-you-colors
-      kostek-pkgs.kde-material-you-colors.widget
+      kde-material-you-colors
+      kde-material-you-colors.widget
     ];
   };
 }
