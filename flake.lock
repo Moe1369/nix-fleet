@@ -120,6 +120,24 @@
         "type": "github"
       }
     },
+    "flake-parts_2": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib_2"
+      },
+      "locked": {
+        "lastModified": 1763759067,
+        "narHash": "sha256-LlLt2Jo/gMNYAwOgdRQBrsRoOz7BPRkzvNaI/fzXi2Q=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "2cccadc7357c0ba201788ae99c4dfa90728ef5e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
     "fmt-src": {
       "flake": false,
       "locked": {
@@ -247,6 +265,27 @@
         "owner": "nlohmann",
         "ref": "v3.12.0",
         "repo": "json",
+        "type": "github"
+      }
+    },
+    "kostek011-pkgs": {
+      "inputs": {
+        "flake-parts": "flake-parts_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1765037497,
+        "narHash": "sha256-aF7zLJxJ1z22WWxkFdXk+W0VHHeZhzv70X9jYUdwKoQ=",
+        "owner": "kostek001",
+        "repo": "pkgs",
+        "rev": "3c221ed6ad73cffe51e7a6352b9cc6dc1483aef8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kostek001",
+        "repo": "pkgs",
         "type": "github"
       }
     },
@@ -482,6 +521,21 @@
         "type": "github"
       }
     },
+    "nixpkgs-lib_2": {
+      "locked": {
+        "lastModified": 1761765539,
+        "narHash": "sha256-b0yj6kfvO8ApcSE+QmA6mUfu8IYG6/uU28OFn4PaC8M=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "719359f4562934ae99f5443f20aa06c2ffff91fc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1775036866,
@@ -568,6 +622,7 @@
         "home-manager": "home-manager",
         "import-tree": "import-tree",
         "jovian-nixos": "jovian-nixos",
+        "kostek011-pkgs": "kostek011-pkgs",
         "lanzaboote": "lanzaboote",
         "millennium": "millennium",
         "nixpkgs": "nixpkgs_2",
