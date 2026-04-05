@@ -1,6 +1,9 @@
-{ ... }:
+{ inputs, ... }:
 {
-  flake.nixosModules.kde-sys-plasma-apps = { pkgs, ... }:
+  flake.nixosModules.kde-sys-plasma-apps = { pkgs, pkgs-unstable, ... }:
+  let
+    kostek-pkgs = inputs.kostek011-pkgs.packages.${pkgs.system};
+  in
   {
     environment.systemPackages = with pkgs; [
       adwaita-fonts
@@ -21,9 +24,10 @@
       kdePackages.ksystemlog
       kdePackages.partitionmanager
       kdePackages.plasma-browser-integration
+      pywal
       klassy
-      kde-material-you-colors
-      kde-material-you-colors.widget
+      kostek-pkgs.kde-material-you-colors
+      kostek-pkgs.kde-material-you-colors.widget
     ];
   };
 }
