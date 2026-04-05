@@ -31,7 +31,11 @@
     programs.plasma = {
       enable = true;
       immutableByDefault = false;
-
+      input.mice = [
+        {
+          accelerationProfile = "none";
+        }
+      ];
       workspace = {
         wallpaperSlideShow.path = "${config.home.homeDirectory}/Bilder/Hintergründe";
         wallpaperSlideShow.interval = 864000;
