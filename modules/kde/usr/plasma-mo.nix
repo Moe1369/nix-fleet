@@ -31,11 +31,6 @@
     programs.plasma = {
       enable = true;
       immutableByDefault = false;
-      input.mice = [
-        {
-          accelerationProfile = "none";
-        }
-      ];
       workspace = {
         wallpaperSlideShow.path = "${config.home.homeDirectory}/Bilder/Hintergründe";
         wallpaperSlideShow.interval = 864000;
@@ -89,7 +84,7 @@
               iconTasks.launchers = [
                 "applications:org.kde.dolphin.desktop"
                 "applications:org.kde.konsole.desktop"
-                "applications:brave.desktop"
+                "applications:brave-browser.desktop"
                 "applications:steam.desktop"
                 "applications:vesktop.desktop"
               ];
