@@ -1,11 +1,9 @@
 { ... }: {
-  flake.nixosModules.gaming-sys-steam = { pkgs, inputs, ... }: {
-    nixpkgs.overlays = [ inputs.millennium.overlays.default ];
-
+  flake.nixosModules.gaming-sys-steam = { pkgs, ... }: {
     programs.steam = {
       enable = true;
       extest.enable = true;
-      package = pkgs.millennium-steam.override {
+      package = pkgs.steam.override {
         extraEnv = {
           GAMEMODERUN = "1";
           PROTON_ENABLE_WAYLAND = "1";
