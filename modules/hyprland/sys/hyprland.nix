@@ -19,7 +19,7 @@
         };
         default_session = {
           command = "${tuigreet} --greeting 'Welcome to NixOS!' --asterisks --remember --remember-user-session --time --cmd ${session}";
-          user    = "greeter";
+          user    = "mo";
         };
       };
     };
