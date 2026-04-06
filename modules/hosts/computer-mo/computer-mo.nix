@@ -36,7 +36,7 @@
       apps-usr-vesktop-all
       base-usr-group
       gaming-usr-steam-all
-      gnome-usr-gnome
+      gnome-usr-gnome-mo
       security-usr-sopsnix
     ];
 
