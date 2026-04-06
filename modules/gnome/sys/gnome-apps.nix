@@ -20,13 +20,14 @@
        baobab
        turnon
        blanket
+       kando
        impression
        gnome-disk-utility
        gnomeExtensions.auto-accent-colour
        gnomeExtensions.appindicator
        gnomeExtensions.caffeine
        gnomeExtensions.clipboard-indicator
-       gnomeExtensions.fly-pie
+       gnomeExtensions.kando-integration
        gnomeExtensions.rounded-window-corners-reborn
        gnomeExtensions.night-theme-switcher
        gnomeExtensions.tinted-shell
