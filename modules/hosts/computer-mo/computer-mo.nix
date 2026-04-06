@@ -20,7 +20,10 @@
       gaming-sys-osu
       gaming-sys-steam
       gaming-sys-sunshine
-      hyprland-sys-hyprland
+      gnome-sys-gdm
+      gnome-sys-gdm-mo
+      gnome-sys-gnome
+      gnome-sys-gnome-apps
       platform-sys-cache
       platform-sys-upgrades
       security-sys-secureboot
@@ -33,6 +36,7 @@
       apps-usr-vesktop-all
       base-usr-group
       gaming-usr-steam-all
+      gnome-usr-gnome
       security-usr-sopsnix
     ];
 
