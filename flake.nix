@@ -16,6 +16,8 @@
     plasma-manager.inputs.home-manager.follows = "home-manager";
     jovian-nixos.url = "github:Jovian-Experiments/Jovian-NixOS";
     jovian-nixos.inputs.nixpkgs.follows = "nixpkgs";
+    caelestia-shell-url = "github:caelestia-dots/shell";
+    caelestia-shell.inputs.nixpkgs.follows = "nixpkgs";
   };
   
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; }
