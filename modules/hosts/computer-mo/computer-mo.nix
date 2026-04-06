@@ -24,7 +24,6 @@
       gnome-sys-gnome-apps
       gnome-sys-gdm
       gnome-sys-gdm-mo
-      gnome-usr-gnome-mo
       platform-sys-cache
       platform-sys-upgrades
       security-sys-secureboot
@@ -37,7 +36,7 @@
       apps-usr-vesktop-all
       base-usr-group
       gaming-usr-steam-all
-      kde-usr-plasma-mo
+      gnome-usr-gnome-mo
       security-usr-sopsnix
     ];
 
