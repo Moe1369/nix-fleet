@@ -2,6 +2,7 @@
   flake.nixosModules.apps-sys-ai = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
       opencode
+      alpaca
     ];
     services.ollama = {
       enable = true;
