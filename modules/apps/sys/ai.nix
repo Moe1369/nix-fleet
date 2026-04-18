@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.apps-sys-ollama = { pkgs, ... }: {
+  flake.nixosModules.apps-sys-ai = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
       opencode
     ];

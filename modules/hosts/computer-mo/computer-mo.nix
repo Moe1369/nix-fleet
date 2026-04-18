@@ -6,9 +6,9 @@
 
   flake.nixosModules.computer-mo = { system, ... }: {
     imports = with inputs.self.nixosModules; [
+      apps-sys-ai
       apps-sys-brave
       apps-sys-libreoffice
-      apps-sys-ollama
       apps-sys-onepassword
       #apps-sys-teams
       apps-sys-vesktop
