@@ -4,6 +4,7 @@
       opencode
       alpaca
       newelle
+      vscode
     ];
     services.ollama = {
       enable = true;
