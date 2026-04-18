@@ -3,6 +3,7 @@
     environment.systemPackages = with pkgs; [
       opencode
       alpaca
+      newelle
     ];
     services.ollama = {
       enable = true;
