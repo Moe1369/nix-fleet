@@ -19,9 +19,9 @@
       servers.default = {
         enable = true;
         model = "large-v3";
-        language = "de";         # oder "auto" für Spracherkennung
+        language = "de"; 
         uri = "tcp://0.0.0.0:10300";
-        device = "cuda";         # ROCm wird als "cuda" angesprochen
+        device = "auto";
       };
     };
   };
