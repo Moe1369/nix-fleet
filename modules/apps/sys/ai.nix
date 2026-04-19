@@ -7,6 +7,13 @@
       vscode
     ];
 
+    users.users.wyoming = {
+      isSystemUser = true;
+      group = "wyoming";
+      extraGroups = [ "audio" "dialout" ];
+    };
+    users.groups.wyoming = {};
+
     services.ollama = {
       enable = true;
       package = pkgs.ollama-rocm;
@@ -39,6 +46,8 @@
         enable = true;
         uri = "tcp://0.0.0.0:10700";
         name = "ai-satellite";
+        user = "wyoming";
+        group = "wyoming";
         vad.enable = true;
       };
     };
