@@ -35,6 +35,9 @@
         enable = true;
         voice = "de_DE-ramona-low";
         uri = "tcp://0.0.0.0:10200";
+        lengthScale = 0.9;   # Geschwindigkeit: >1 = langsamer, <1 = schneller
+        noiseScale = 0.667;  # Variation in der Stimme
+        noiseWidth = 0.8;    # Phonem-Längen-Variation
       };
 
       openwakeword = {
