@@ -10,6 +10,9 @@
       enable = true;
       package = pkgs.ollama-rocm;
       loadModels = [ "gpt-oss:20b" "gemma4:26b" "gemma4:e4b" ];
+      environmentVariables = {
+        OLLAMA_HOST = "0.0.0.0";
+      };
     };
   };
 }
