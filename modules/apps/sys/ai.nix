@@ -25,7 +25,7 @@
     services.wyoming = {
       faster-whisper.servers.default = {
         enable = true;
-        model = "large-v3";
+        model = "turbo";
         language = "de";
         uri = "tcp://0.0.0.0:10300";
         device = "auto";
@@ -33,7 +33,7 @@
 
       piper.servers.default = {
         enable = true;
-        voice = "de_DE-thorsten-high";
+        voice = "de_DE-ramona-low";
         uri = "tcp://0.0.0.0:10200";
       };
 
