@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.apps-sys-ai = { pkgs, ... }: {
+  flake.nixosModules.apps-sys-ai = { pkgs, lib, ... }: {
     environment.systemPackages = with pkgs; [
       opencode
       alpaca
@@ -15,14 +15,40 @@
       loadModels = [ "qwen3.6:35b" "gpt-oss:20b" "gemma4:26b" "gemma4:e4b" ];
     };
 
-    services.wyoming.faster-whisper = {
-      servers.default = {
+    services.wyoming = {
+      faster-whisper.servers.default = {
         enable = true;
         model = "large-v3";
-        language = "de"; 
+        language = "de";
         uri = "tcp://0.0.0.0:10300";
         device = "auto";
       };
+
+      piper.servers.default = {
+        enable = true;
+        voice = "de_DE-thorsten-high";
+        uri = "tcp://0.0.0.0:10200";
+      };
+
+      openwakeword = {
+        enable = true;
+        uri = "tcp://0.0.0.0:10400";
+      };
+
+      satellite = {
+        enable = true;
+        uri = "tcp://0.0.0.0:10700";
+        name = "ai-satellite";
+        vad.enable = true;
+      };
     };
+
+    networking.firewall.allowedTCPPorts = [
+      11434  # ollama
+      10200  # wyoming piper (TTS)
+      10300  # wyoming faster-whisper (STT)
+      10400  # wyoming openwakeword
+      10700  # wyoming satellite
+    ];
   };
 }
