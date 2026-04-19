@@ -21,6 +21,7 @@
        turnon
        blanket
        kando
+       go-hass-agent
        impression
        gnome-disk-utility
        gnomeExtensions.auto-accent-colour
