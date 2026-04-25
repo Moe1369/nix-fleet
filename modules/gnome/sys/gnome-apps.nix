@@ -23,6 +23,7 @@
        kando
        go-hass-agent
        impression
+       high-tide
        gnome-disk-utility
        gnomeExtensions.auto-accent-colour
        gnomeExtensions.appindicator
