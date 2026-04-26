@@ -21,7 +21,6 @@
        turnon
        blanket
        kando
-       go-hass-agent
        impression
        high-tide
        gnome-disk-utility
