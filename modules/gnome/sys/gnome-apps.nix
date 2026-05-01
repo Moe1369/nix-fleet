@@ -24,7 +24,7 @@
        impression
        high-tide
        gnome-disk-utility
-       gnomeExtensions.auto-accent-colour
+       gnomeExtensions.dynamic-music-pill
        gnomeExtensions.appindicator
        gnomeExtensions.caffeine
        gnomeExtensions.clipboard-indicator
@@ -33,6 +33,9 @@
        gnomeExtensions.night-theme-switcher
        gnomeExtensions.tinted-shell
        gnomeExtensions.middle-click-to-close-in-overview
+       gnomeExtensions.quick-settings-audio-devices-hider
+       gnomeExtensions.quick-settings-audio-devices-renamer
+
    ];
   };
 }
