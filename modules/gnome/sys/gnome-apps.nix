@@ -28,13 +28,14 @@
        gnomeExtensions.appindicator
        gnomeExtensions.caffeine
        gnomeExtensions.clipboard-indicator
-       gnomeExtensions.kando-integration
        gnomeExtensions.rounded-window-corners-reborn
        gnomeExtensions.night-theme-switcher
        gnomeExtensions.tinted-shell
        gnomeExtensions.middle-click-to-close-in-overview
        gnomeExtensions.quick-settings-audio-devices-hider
        gnomeExtensions.quick-settings-audio-devices-renamer
+       gnomeExtensions.dash-to-dock
+       gnomeExtensions.quick-settings-audio-panel
    ];
   };
 }
