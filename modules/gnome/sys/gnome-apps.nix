@@ -35,7 +35,6 @@
        gnomeExtensions.middle-click-to-close-in-overview
        gnomeExtensions.quick-settings-audio-devices-hider
        gnomeExtensions.quick-settings-audio-devices-renamer
-
    ];
   };
 }
