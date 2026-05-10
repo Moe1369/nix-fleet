@@ -20,9 +20,10 @@
       gaming-sys-osu
       gaming-sys-steam
       gaming-sys-sunshine
-      kde-sys-plasma
-      kde-sys-plasma-apps
-      kde-sys-sddm-mo
+      gnome-sys-gnome
+      gnome-sys-gnome-apps
+      gnome-sys-gdm
+      gnome-sys-gdm-mo
       platform-sys-cache
       platform-sys-upgrades
       security-sys-secureboot
@@ -35,7 +36,7 @@
       apps-usr-vesktop-all
       base-usr-group
       gaming-usr-steam-all
-      kde-usr-plasma-mo
+      gnome-usr-gnome-mo
       security-usr-sopsnix
     ];
 
