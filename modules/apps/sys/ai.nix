@@ -1,11 +1,5 @@
 { ... }: {
   flake.nixosModules.apps-sys-ai = { pkgs, lib, ... }: {
-    environment.systemPackages = with pkgs; [
-      opencode
-      alpaca
-      newelle
-      vscode
-    ];
 
     users.users.wyoming = {
       isSystemUser = true;
@@ -35,7 +29,7 @@
         enable = true;
         voice = "de_DE-ramona-low";
         uri = "tcp://0.0.0.0:10200";
-        lengthScale = 1.3;   # Geschwindigkeit: >1 = langsamer, <1 = schneller
+        lengthScale = 1.2;   # Geschwindigkeit: >1 = langsamer, <1 = schneller
         noiseScale = 0.667;  # Variation in der Stimme
         noiseWidth = 0.4;    # Phonem-Längen-Variation
       };
