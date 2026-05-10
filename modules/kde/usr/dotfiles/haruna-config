@@ -1,5 +1,5 @@
 [Audio]
-PreferredLanguage=ger,de,eng,en,jap,ja
+PreferredLanguage=eng,en,jap,ja,ger,de
 
 [General]
 AppendVideoToSingleInstance=true
@@ -10,4 +10,4 @@ UseSingleInstance=true
 UseHWDecoding=true
 
 [Subtitles]
-PreferredLanguage=ger,de,eng,en,jap,ja
+PreferredLanguage=eng,en,ger,de
