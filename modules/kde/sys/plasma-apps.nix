@@ -23,6 +23,7 @@
       kdePackages.plasma-browser-integration
       pywal
       klassy
+      python314Packages.kde-material-you-colors
     ];
   };
 }
