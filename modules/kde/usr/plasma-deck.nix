@@ -32,6 +32,7 @@
     home.file.".local/share/user-places.xbel".source = ./dotfiles/userplaces-deck;
     home.file.".config/kde-material-you-colors/config.conf".source = ./dotfiles/kmyc-config;
     home.file.".config/autostart/kde-material-you-colors.desktop".source = ./dotfiles/kmyc-desktop;
+    home.file.".config/koirc".source = ./dotfiles/koirc;
     home.file.wallpaper = {
       recursive = true;
       source = ./wallpaper-deck;
