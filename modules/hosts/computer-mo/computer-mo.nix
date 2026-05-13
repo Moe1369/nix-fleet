@@ -2,6 +2,7 @@
   flake.nixosConfigurations."computer-mo" = inputs.self.lib.mkHost {
     system = "x86_64-linux";
     host   = "computer-mo";
+    user   = "mo";
   };
 
   flake.nixosModules.computer-mo = { system, ... }: {
@@ -23,7 +24,6 @@
       gnome-sys-gnome
       gnome-sys-gnome-apps
       gnome-sys-gdm
-      gnome-sys-gdm-mo
       platform-sys-cache
       platform-sys-upgrades
       security-sys-secureboot

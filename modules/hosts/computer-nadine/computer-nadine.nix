@@ -2,6 +2,7 @@
   flake.nixosConfigurations."computer-nadine" = inputs.self.lib.mkHost {
     system = "x86_64-linux";
     host   = "computer-nadine";
+    user   = "nadine";
   };
 
   flake.nixosModules.computer-nadine = { system, ... }: {
@@ -17,7 +18,7 @@
       gaming-sys-steam
       kde-sys-plasma
       kde-sys-plasma-apps
-      kde-sys-sddm-nadine
+      kde-sys-sddm
       platform-sys-cache
       platform-sys-upgrades
       security-sys-secureboot
