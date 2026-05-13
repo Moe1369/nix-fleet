@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.gnome-sys-gdm = { ... }:{
+  flake.nixosModules.gnome-sys-gdm = { user, ... }:{
     services.displayManager.gdm.enable = true;
     services.displayManager.autoLogin.enable = true;
     services.displayManager.autoLogin.user = user;
