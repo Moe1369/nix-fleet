@@ -22,10 +22,10 @@
       users-sys-deck
     ];
     home-manager.users.deck.imports = with config.flake.homeModules; [
-      apps-usr-vesktop-all
+      apps-usr-vesktop
       base-usr-group
-      gaming-usr-steam-all
-      gaming-usr-jovian-all
+      gaming-usr-steam
+      gaming-usr-jovian
       kde-usr-plasma-deck
       security-usr-sopsnix
     ];

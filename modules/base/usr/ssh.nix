@@ -1,5 +1,5 @@
 { config, ... }: {
-  flake.homeModules.base-usr-ssh-all = { config, ... }: {
+  flake.homeModules.base-usr-ssh = { config, ... }: {
     sops.secrets."ssh/intern/public" = {
       path = "${config.home.homeDirectory}/.ssh/intern.pub";
     };

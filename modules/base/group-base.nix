@@ -17,9 +17,9 @@
 
   flake.homeModules.base-usr-group = { ... }: {
     imports = with config.flake.homeModules; [
-      base-usr-git-all
-      base-usr-zsh-all
-      base-usr-ssh-all
+      base-usr-git
+      base-usr-zsh
+      base-usr-ssh
     ];
   };
 }

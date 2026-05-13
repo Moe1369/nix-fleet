@@ -1,5 +1,5 @@
 { ... }: {
-  flake.homeModules.gaming-usr-jovian-all = { ... }: {
+  flake.homeModules.gaming-usr-jovian = { ... }: {
     home.file.".steam/steam/.cef-enable-remote-debugging" = {
       text = "";
     };

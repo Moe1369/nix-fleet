@@ -1,5 +1,5 @@
 { ... }: {
-  flake.homeModules.gaming-usr-steam-all = { config, pkgs, ... }: {
+  flake.homeModules.gaming-usr-steam = { config, pkgs, ... }: {
     home.file.".config/autostart/steam.desktop" = {
       text = ''
         [Desktop Entry]

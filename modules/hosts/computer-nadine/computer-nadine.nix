@@ -26,9 +26,9 @@
       users-sys-nadine
     ];
     home-manager.users.nadine.imports = with config.flake.homeModules; [
-      apps-usr-vesktop-all
+      apps-usr-vesktop
       base-usr-group
-      gaming-usr-steam-all
+      gaming-usr-steam
       kde-usr-plasma-nadine
       security-usr-sopsnix
     ];

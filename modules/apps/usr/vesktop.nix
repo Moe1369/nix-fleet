@@ -1,5 +1,5 @@
 { ... }: {
-  flake.homeModules.apps-usr-vesktop-all = { config, pkgs, ... }: {
+  flake.homeModules.apps-usr-vesktop = { config, pkgs, ... }: {
     home.file.".config/autostart/vesktop.desktop" = {
       text = ''
         [Desktop Entry]
