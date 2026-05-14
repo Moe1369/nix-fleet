@@ -157,7 +157,7 @@
 
     home.file.wallpaper = {
       recursive = true;
-      source = ./wallpaper;
+      source = ./wallpaper-mo;
       target = ".local/share/backgrounds";
     };
 
