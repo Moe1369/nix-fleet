@@ -163,7 +163,7 @@
 
     home.file.".local/share/gnome-background-properties/my-wallpapers.xml" = {
       text = let
-        files = builtins.attrNames (builtins.readDir ./wallpaper);
+        files = builtins.attrNames (builtins.readDir ./wallpaper-mo);
         entry = file: ''
           <wallpaper deleted="false">
             <name>${file}</name>
