@@ -10,7 +10,7 @@
       apps-sys-ai
       apps-sys-brave
       apps-sys-libreoffice
-      apps-sys-onepassword
+      apps-sys-protonpass
       apps-sys-vesktop
       base-sys-group
       desktop-sys-group
