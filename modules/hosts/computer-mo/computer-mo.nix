@@ -10,7 +10,6 @@
       apps-sys-ai
       apps-sys-brave
       apps-sys-libreoffice
-      apps-sys-ladybird
       apps-sys-onepassword
       apps-sys-vesktop
       base-sys-group
