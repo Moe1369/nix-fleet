@@ -23,7 +23,6 @@
     ];
     
     boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "ahci" "virtio_pci" "virtio_blk" "virtio_scsi" "sd_mod" ];
-    boot.kernelParams = [ "console=ttyS0" ];
     nixpkgs.hostPlatform = system;
   };
 }
