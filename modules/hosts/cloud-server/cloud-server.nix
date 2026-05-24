@@ -17,7 +17,7 @@
       users-sys-administrator
     ];
     
-    home-manager.users.deck.imports = with config.flake.homeModules; [
+    home-manager.users.administrator.imports = with config.flake.homeModules; [
       base-usr-group
       security-usr-sopsnix
     ];
