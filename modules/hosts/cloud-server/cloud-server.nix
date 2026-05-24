@@ -8,7 +8,7 @@
   flake.nixosModules.cloud-server = { system, ... }: {
     imports = with inputs.self.nixosModules; [
       base-sys-group
-      disks-sys-singledisk-encrypted
+      disks-sys-singledisk-encrypted-sda
       platform-sys-cache
       platform-sys-upgrades
       security-sys-sopsnix
