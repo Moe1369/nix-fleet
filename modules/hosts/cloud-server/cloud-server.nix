@@ -5,7 +5,7 @@
     user   = "administrator";
   };
 
-  flake.nixosModules.deck = { system, ... }: {
+  flake.nixosModules.cloud-server = { system, ... }: {
     imports = with inputs.self.nixosModules; [
       base-sys-group
       disks-sys-singledisk-encrypted
