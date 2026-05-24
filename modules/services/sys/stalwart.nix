@@ -5,6 +5,7 @@
     };
 
     services.stalwart-mail = {
+      stateVersion = "2.0";
       enable = true;
       settings = {
         server.listener = {
