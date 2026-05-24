@@ -5,17 +5,17 @@
       neededForUsers = true;
     };
     sops.secrets."ssh/intern/public" = {
-      owner = "mo";
-      path = "/home/mo/.ssh/authorized_keys";
+      owner = "administrator";
+      path = "/home/administrator/.ssh/authorized_keys";
       mode = "0600";
     };
     
     systemd.tmpfiles.rules = [
-      "d /home/mo/.ssh 0700 mo users -"
+      "d /home/mo/.ssh 0700 administrator users -"
     ];
 
     users.mutableUsers = false;     
-    users.users.mo = {
+    users.users.administrator = {
       isNormalUser = true;
       description = "Mohamed Chrayed";
       extraGroups = [ "networkmanager" "wheel" "video" "audio" ];
