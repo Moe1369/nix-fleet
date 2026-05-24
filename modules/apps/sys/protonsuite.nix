@@ -3,7 +3,7 @@
     environment.systemPackages = with pkgs; [
       proton-pass
       protonmail-desktop
-      proton-vpn
+      protonvpn-gui
       proton-authenticator
     ];
   };
