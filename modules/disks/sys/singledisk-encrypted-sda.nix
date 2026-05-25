@@ -36,8 +36,5 @@
       device = "/var/lib/swapfile";
       size = 4 * 1024;
     }];
-    boot.initrd.luks.devices."cryptroot" = {
-      device = lib.mkForce "/dev/sda2";
-    };
   };
 }
