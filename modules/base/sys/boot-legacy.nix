@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.base-sys-boot-server = { ... }: {
+  flake.nixosModules.base-sys-boot-legacy = { ... }: {
     boot.loader.grub.enable = true;
     boot.loader.grub.device = "/dev/sda";
     boot.loader.timeout = 1;

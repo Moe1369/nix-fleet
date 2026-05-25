@@ -1,7 +1,7 @@
 { inputs, config, ... }: {
   flake.nixosModules.base-sys-group-server = {
     imports = with inputs.self.nixosModules; [
-      base-sys-boot
+      base-sys-boot-legacy
       base-sys-firmware
       base-sys-hm
       base-sys-locale
