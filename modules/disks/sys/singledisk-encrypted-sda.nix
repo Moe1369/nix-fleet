@@ -37,7 +37,7 @@
       size = 4 * 1024;
     }];
     boot.initrd.luks.devices."cryptroot" = {
-      device = "/dev/sda2";
+      device = lib.mkForce "/dev/sda2";
     };
   };
 }
