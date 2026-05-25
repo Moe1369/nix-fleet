@@ -1,7 +1,6 @@
 { ... }: {
   flake.nixosModules.disks-sys-singledisk-encrypted-sda = { inputs, lib, ... }: {
     imports = [ inputs.disko.nixosModules.disko ];
-
     disko.devices = {
       disk = {
         main = {
@@ -10,16 +9,9 @@
           content = {
             type = "gpt";
             partitions = {
-              ESP = {
-                size = "1024M";
-                type = "EF00";
-                content = {
-                  type = "filesystem";
-                  format = "vfat";
-                  mountpoint = "/boot";
-                  mountOptions = [ "fmask=0077" "dmask=0077" ];
-                  extraArgs = [ "-n" "boot" ];
-                };
+              boot = {
+                size = "1M";
+                type = "EF02";
               };
               luks = {
                 size = "100%";
@@ -40,14 +32,12 @@
         };
       };
     };
-
     swapDevices = [{
       device = "/var/lib/swapfile";
       size = 4 * 1024;
     }];
-
     boot.initrd.luks.devices."cryptroot" = {
-      device = lib.mkForce "/dev/sda2";
+      device = "/dev/sda2";
     };
   };
 }
