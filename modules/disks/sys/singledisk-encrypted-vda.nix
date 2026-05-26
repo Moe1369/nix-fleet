@@ -6,7 +6,7 @@
       disk = {
         main = {
           type = "disk";
-          device = "/dev/nvme0n1";
+          device = "/dev/vda";
           content = {
             type = "gpt";
             partitions = {
@@ -47,7 +47,7 @@
     }];
 
     boot.initrd.luks.devices."cryptroot" = {
-      device = lib.mkForce "/dev/nvme0n1p2";
+      device = lib.mkForce "/dev/vda2";
     };
   };
 }
