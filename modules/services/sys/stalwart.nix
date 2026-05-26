@@ -7,6 +7,7 @@
     services.stalwart = {
       stateVersion = "2.0";
       enable = true;
+      credentials = "%{file:${config.sops.secrets."services/stalwart/adminpass".path}}%";
       settings = {
         server.listener = {
           smtp = {
@@ -46,11 +47,6 @@
           type = "rocksdb";
           path = "/var/lib/stalwart-mail/data";
           compression = "lz4";
-        };
-
-        authentication.fallback-admin = {
-          user = "admin";
-          secret = "%{file:${config.sops.secrets."services/stalwart/adminpass".path}}%";
         };
       };
     };
