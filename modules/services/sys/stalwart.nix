@@ -7,7 +7,9 @@
     services.stalwart = {
       stateVersion = "2.0";
       enable = true;
-      credentials = "%{file:${config.sops.secrets."services/stalwart/adminpass".path}}%";
+      credentials = {
+        "admin-pw" = "%{file:${config.sops.secrets."services/stalwart/adminpass".path}}%";
+      };
       settings = {
         server.listener = {
           smtp = {
