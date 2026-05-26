@@ -17,7 +17,7 @@
     programs.ssh = {
       enable = true;
       enableDefaultConfig = false;
-      matchBlocks = {
+      settings = {
         "*" = {
           identityFile = [
             "${config.home.homeDirectory}/.ssh/intern"
