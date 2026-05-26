@@ -24,5 +24,7 @@
     
     boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "ahci" "virtio_pci" "virtio_blk" "virtio_scsi" "sd_mod" ];
     nixpkgs.hostPlatform = system;
+    services.qemuGuest.enable = true;
+    services.spice-vdagentd.enable = true;
   };
 }

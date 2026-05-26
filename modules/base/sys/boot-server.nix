@@ -8,7 +8,5 @@
     boot.initrd.verbose = false;
     boot.initrd.enable = true;
     boot.initrd.systemd.enable = true;
-    boot.plymouth.enable = true;
-    boot.plymouth.theme = "bgrt";
   };
 }
