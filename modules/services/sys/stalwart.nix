@@ -8,7 +8,7 @@
       stateVersion = "2.0";
       enable = true;
       credentials = {
-        "admin-pw" = "%{file:${config.sops.secrets."services/stalwart/adminpass".path}}%";
+        "admin" = "%{file:${config.sops.secrets."services/stalwart/adminpass".path}}%";
       };
       settings = {
         server.listener = {
