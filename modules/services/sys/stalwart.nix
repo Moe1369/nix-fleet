@@ -55,6 +55,6 @@
       };
     };
 
-    networking.firewall.allowedTCPPorts = [ 25 465 587 143 993 ];
+    networking.firewall.allowedTCPPorts = [ 25 465 587 143 993 8080 ];
   };
 }
