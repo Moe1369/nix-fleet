@@ -4,7 +4,7 @@
       owner = "stalwart-mail";
     };
 
-    services.stalwart-mail = {
+    services.stalwart = {
       stateVersion = "2.0";
       enable = true;
       settings = {
@@ -32,7 +32,7 @@
             tls.implicit = true;
           };
           http = {
-            bind = [ "127.0.0.1:8080" ];
+            bind = [ "0.0.0.0:8080" ];
             protocol = "http";
           };
         };
