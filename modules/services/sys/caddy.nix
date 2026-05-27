@@ -3,14 +3,9 @@
     services.caddy = {
       enable = true;
       virtualHosts = {
-        "mail.chrayed.de" = {
+        "auth.chrayed.de" = {
           extraConfig = ''
-            reverse_proxy localhost:8080
-          '';
-        };
-        "mailadmin.chrayed.de" = {
-          extraConfig = ''
-            reverse_proxy localhost:8888
+            reverse_proxy localhost:9091
           '';
         };
       };
