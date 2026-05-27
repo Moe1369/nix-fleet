@@ -11,6 +11,10 @@
         "admin" = "%{file:${config.sops.secrets."services/stalwart/adminpass".path}}%";
       };
       settings = {
+         authentication.fallback-admin = {
+           user = "admin";
+           secret = "%{file:${config.sops.secrets."services/stalwart/adminpass".path}}%";
+          };
         server.listener = {
           smtp = {
             bind = [ "0.0.0.0:25" ];
@@ -39,7 +43,6 @@
             protocol = "http";
           };
         };
-
         storage.data = "rocksdb";
         storage.fts  = "rocksdb";
         storage.blob = "rocksdb";
