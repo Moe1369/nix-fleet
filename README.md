@@ -65,6 +65,8 @@ sudo nixos-rebuild switch --refresh --flake git+https://gitea.chrayed.de/Chrayed
 
 Both aliases are available as `rebuild` and `rebuild-from-gitea` in the shell. All hosts run automatic upgrades every Sunday at 04:00, followed by a garbage collection at 04:30 (generations older than 7 days are deleted).
 
+A GitHub Actions workflow runs daily at 23:00 UTC to update all flake inputs and commit the resulting `flake.lock` back to the repo. This means hosts pick up fresh inputs on their next automatic upgrade. The workflow can also be triggered manually via `workflow_dispatch`.
+
 ## Nix cache
 
 Private binary cache via [garnix.io](https://garnix.io).
