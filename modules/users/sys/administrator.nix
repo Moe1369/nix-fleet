@@ -11,7 +11,7 @@
     };
     
     systemd.tmpfiles.rules = [
-      "d /home/mo/.ssh 0700 administrator users -"
+      "d /home/administrator/.ssh 0700 administrator users -"
     ];
 
     users.mutableUsers = false;     
