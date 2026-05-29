@@ -10,7 +10,7 @@ The module structure follows the dendritic pattern: modules are organized in a t
 |------|-------------|---------|------|
 | `computer-mo` | Main desktop (x86_64) | GNOME | mo |
 | `computer-nadine` | Second desktop (x86_64) | KDE Plasma 6 | nadine |
-| `deck` | Steam Deck | KDE Plasma 6 (Jovian NixOS) | deck |
+| `deck` | Couch Gaming PC | KDE Plasma 6 (Jovian NixOS) | deck |
 | `cloud-server` | VPS / cloud server (x86_64) | — | administrator |
 
 ## Structure
