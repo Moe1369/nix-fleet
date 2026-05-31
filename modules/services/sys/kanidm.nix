@@ -43,6 +43,12 @@
         tls_chain = "/var/lib/kanidm/chain.pem";
         tls_key = "/var/lib/kanidm/key.pem";
       };
+      auth.oauth."kanidm" = {
+        type = "oidc";
+        issuer = "https://auth.chrayed.de/oauth2/openid/stalwart";
+        client-id = "stalwart";
+        client-secret = "%{file:${config.sops.secrets."services/stalwart/oauth2-kanidm-secret".path}}%";
+      };
       provision = {
         enable = true;
         groups.idm_all_persons = {};
