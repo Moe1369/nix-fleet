@@ -3,7 +3,7 @@
     sops.secrets."services/stalwart/adminpass" = {
       owner = "stalwart-mail";
     };
-    sops.secrets."services/stalwart/oauth2-kanidm-secret" = {
+    sops.secrets."services/stalwart/oauth2-stalwart-secret" = {
       owner = "stalwart-mail";
     };
     services.stalwart = {
@@ -21,7 +21,7 @@
           type = "oidc";
           issuer = "https://auth.chrayed.de/oauth2/openid/stalwart";
           client-id = "stalwart";
-          client-secret = "%{file:${config.sops.secrets."services/stalwart/oauth2-kanidm-secret".path}}%";
+          client-secret = "%{file:${config.sops.secrets."services/stalwart/oauth2-stalwart-secret".path}}%";
         };
         server.listener = {
           smtp = {
