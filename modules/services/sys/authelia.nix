@@ -82,10 +82,6 @@
               domain = "auth.chrayed.de";
               policy = "bypass";
             }
-            {
-              domain = "*.chrayed.de";
-              policy = "two_factor";
-            }
           ];
         };
       };
