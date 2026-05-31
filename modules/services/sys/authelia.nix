@@ -90,7 +90,7 @@
       };
       environmentVariables = {
         AUTHELIA_AUTHENTICATION_BACKEND_LDAP_PASSWORD_FILE =
-          config.sops.secrets."services/authelia/lldap-user-password".path;
+          config.sops.secrets."services/authelia/lldap-admin-password".path;
       };
     };
 
