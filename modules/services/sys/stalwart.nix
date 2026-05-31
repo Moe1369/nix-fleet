@@ -39,7 +39,7 @@
             tls.implicit = true;
           };
           http = {
-            bind = [ "0.0.0.0:8080" ];
+            bind = [ "127.0.0.1:8080" ];
             protocol = "http";
           };
         };
@@ -55,7 +55,15 @@
         };
       };
     };
-
-    networking.firewall.allowedTCPPorts = [ 25 465 587 143 993 8080 ];
+    services.caddy = {
+      virtualHosts = {
+        "mailadmin.chrayed.de" = {
+          extraConfig = ''
+            reverse_proxy localhost:8080
+          '';
+        };
+      };
+    };
+    networking.firewall.allowedTCPPorts = [ 25 465 587 143 993 ];
   };
 }
