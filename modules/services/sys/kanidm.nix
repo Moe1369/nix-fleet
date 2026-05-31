@@ -45,6 +45,7 @@
       };
       provision = {
         enable = true;
+        groups.idm_all_persons = {};
         adminPasswordFile = config.sops.secrets."services/kanidm/admin-password".path;
         idmAdminPasswordFile = config.sops.secrets."services/kanidm/idm-admin-password".path;
         systems.oauth2.stalwart = {
