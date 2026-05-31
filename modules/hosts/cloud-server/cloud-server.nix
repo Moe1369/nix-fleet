@@ -13,6 +13,7 @@
       platform-sys-upgrades
       security-sys-sopsnix
       services-sys-caddy
+      services-sys-kanidm
       services-sys-stalwart
       users-sys-administrator
     ];
