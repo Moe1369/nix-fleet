@@ -1,14 +1,14 @@
 { ... }: {
-  flake.nixosModules.gaming-sys-jovian = { inputs, ... }:{
+  flake.nixosModules.gaming-sys-jovian = { inputs,user ... }:{
     imports = [ inputs.jovian-nixos.nixosModules.default ];
     jovian.steam.enable = true;
     jovian.decky-loader.enable = true;
     jovian.decky-loader.stateDir = "/var/lib/decky-loader";
-    jovian.decky-loader.user = "decky";
+    jovian.decky-loader.user = user;
     jovian.devices.steamdeck.autoUpdate = true;
     jovian.steam.autoStart = true;
     jovian.devices.steamdeck.enable = true; 
-    jovian.steam.user = "deck";
+    jovian.steam.user = user;
     jovian.steam.desktopSession = "plasma";
     services.displayManager.sddm.wayland.enable = true;
     programs.steam.enable = true;
