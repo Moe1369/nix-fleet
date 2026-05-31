@@ -20,6 +20,7 @@
       group = "lldap";
     };
     sops.secrets."services/authelia/lldap-admin-password" = {
+      owner = "authelia-main";
       mode = "0440";
       group = "lldap";
     };
