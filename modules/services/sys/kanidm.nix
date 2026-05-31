@@ -6,7 +6,7 @@
     sops.secrets."services/kanidm/idm-admin-password" = {
       owner = "kanidm";
     };
-    sops.secrets."services/kanidm/oauth2-stalwart-secret" = {
+    sops.secrets."services/kanidm/oauth2-kanidm-secret" = {
       owner = "kanidm";
     };
 
@@ -52,7 +52,7 @@
           displayName = "Stalwart Mail";
           originUrl = "https://mailadmin.chrayed.de/auth/callback";
           originLanding = "https://mailadmin.chrayed.de";
-          basicSecretFile = config.sops.secrets."services/kanidm/oauth2-stalwart-secret".path;
+          basicSecretFile = config.sops.secrets."services/kanidm/oauth2-kanidm-secret".path;
           scopeMaps."idm_all_persons" = [ "openid" "profile" "email" "groups" ];
         };
       };
