@@ -35,6 +35,9 @@
         enable = true;
         adminPasswordFile = config.sops.secrets."services/kanidm/admin-password".path;
         idmAdminPasswordFile = config.sops.secrets."services/kanidm/idm-admin-password".path;
+        groups.idm_all_persons = {
+          members = [];
+        };
         systems.oauth2.stalwart = {
           displayName = "Stalwart Mail";
           originUrl = "https://mailadmin.chrayed.de/auth/callback";
