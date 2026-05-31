@@ -12,12 +12,16 @@
     };
     sops.secrets."services/authelia/lldap-jwt-secret" = {
       owner = "lldap";
+      group = "lldap";
+
     };
     sops.secrets."services/authelia/lldap-admin-password" = {
       owner = "lldap";
+      group = "lldap";
     };
     sops.secrets."services/authelia/lldap-user-password" = {
       owner = "authelia-main";
+      group = "lldap";
     };
 
     services.authelia.instances.main = {
