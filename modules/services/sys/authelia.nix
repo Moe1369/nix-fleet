@@ -11,9 +11,11 @@
     };
     sops.secrets."services/authelia/lldap-jwt-secret" = {
       mode = "0440";
+      group = "lldap";
     };
     sops.secrets."services/authelia/lldap-admin-password" = {
       mode = "0440";
+      group = "lldap";
     };
     sops.secrets."services/authelia/lldap-user-password" = {
       owner = "authelia-main";
