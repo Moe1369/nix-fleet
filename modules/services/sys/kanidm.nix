@@ -22,7 +22,7 @@
     '';
 
     services.kanidm = {
-      package = pkgs.kanidm.withSecretProvisioning_1_10;
+      package = pkgs.kanidmwithSecretProvisioning_1_10;
       server.enable = true;
       server.settings = {
         origin = "https://auth.chrayed.de";
