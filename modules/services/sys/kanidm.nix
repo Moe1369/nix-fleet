@@ -1,6 +1,5 @@
 { ... }: {
   flake.nixosModules.services-sys-kanidm = { config, pkgs, ... }: {
-
     sops.secrets."services/kanidm/admin-password" = {
       owner = "kanidm";
     };
@@ -11,15 +10,28 @@
       owner = "kanidm";
     };
 
-    systemd.services.kanidm.preStart = ''
-      if [ ! -f /var/lib/kanidm/key.pem ]; then
-        ${pkgs.openssl}/bin/openssl req -x509 -newkey rsa:4096 -nodes \
-          -keyout /var/lib/kanidm/key.pem \
-          -out /var/lib/kanidm/chain.pem \
-          -days 3650 \
-          -subj "/CN=kanidm"
-      fi
-    '';
+    systemd.services.kanidm-generate-cert = {
+      description = "Generate self-signed cert for kanidm";
+      before = [ "kanidm.service" ];
+      requiredBy = [ "kanidm.service" ];
+      serviceConfig = {
+        Type = "oneshot";
+        RemainAfterExit = true;
+        StateDirectory = "kanidm";
+        StateDirectoryMode = "0700";
+        User = "kanidm";
+        Group = "kanidm";
+      };
+      script = ''
+        if [ ! -f /var/lib/kanidm/chain.pem ]; then
+          ${pkgs.openssl}/bin/openssl req -x509 -newkey rsa:4096 -nodes \
+            -keyout /var/lib/kanidm/key.pem \
+            -out /var/lib/kanidm/chain.pem \
+            -days 3650 \
+            -subj "/CN=kanidm"
+        fi
+      '';
+    };
 
     services.kanidm = {
       package = pkgs.kanidmWithSecretProvisioning_1_10;
