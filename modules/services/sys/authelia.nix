@@ -1,6 +1,5 @@
 { ... }: {
   flake.nixosModules.services-sys-authelia = { config, ... }: {
-
     sops.secrets."services/authelia/jwt-secret" = {
       owner = "authelia-main";
     };
@@ -11,36 +10,30 @@
       owner = "authelia-main";
     };
     sops.secrets."services/authelia/lldap-jwt-secret" = {
-      owner = "lldap";
-      group = "lldap";
-
+      mode = "0440";
     };
     sops.secrets."services/authelia/lldap-admin-password" = {
-      owner = "lldap";
-      group = "lldap";
+      mode = "0440";
     };
     sops.secrets."services/authelia/lldap-user-password" = {
       owner = "authelia-main";
-      group = "lldap";
     };
 
     services.authelia.instances.main = {
       enable = true;
       secrets = {
-        jwtSecretFile             = config.sops.secrets."services/authelia/jwt-secret".path;
-        sessionSecretFile         = config.sops.secrets."services/authelia/session-secret".path;
-        storageEncryptionKeyFile  = config.sops.secrets."services/authelia/storage-encryption-key".path;
+        jwtSecretFile            = config.sops.secrets."services/authelia/jwt-secret".path;
+        sessionSecretFile        = config.sops.secrets."services/authelia/session-secret".path;
+        storageEncryptionKeyFile = config.sops.secrets."services/authelia/storage-encryption-key".path;
       };
       settings = {
         theme = "auto";
         default_2fa_method = "totp";
         server.address = "tcp://127.0.0.1:9091/";
-
         log = {
           level = "info";
           format = "text";
         };
-
         authentication_backend.ldap = {
           implementation = "custom";
           address = "ldap://127.0.0.1:3890";
@@ -55,7 +48,6 @@
           display_name_attribute = "displayName";
           user = "uid=authelia,ou=people,dc=chrayed,dc=de";
         };
-
         session = {
           name = "authelia_session";
           domain = "auth.chrayed.de";
@@ -63,21 +55,17 @@
           inactivity = "5m";
           remember_me_duration = "1M";
         };
-
         regulation = {
           max_retries = 3;
           find_time = "2m";
           ban_time = "5m";
         };
-
         storage.local = {
           path = "/var/lib/authelia-main/db.sqlite3";
         };
-
         notifier.filesystem = {
           filename = "/var/lib/authelia-main/notifications.txt";
         };
-
         access_control = {
           default_policy = "deny";
           rules = [
@@ -107,12 +95,12 @@
         http_host = "127.0.0.1";
         ldap_base_dn = "dc=chrayed,dc=de";
         database_url = "sqlite:///var/lib/lldap/users.db?mode=rwc";
-      };
-      environment = {
-        LLDAP_JWT_SECRET_FILE      = config.sops.secrets."services/authelia/lldap-jwt-secret".path;
-        LLDAP_LDAP_USER_PASS_FILE  = config.sops.secrets."services/authelia/lldap-admin-password".path;
+        jwt_secret_file = config.sops.secrets."services/authelia/lldap-jwt-secret".path;
+        ldap_user_pass_file = config.sops.secrets."services/authelia/lldap-admin-password".path;
+        force_ldap_user_pass_reset = "always";
       };
     };
+
     services.caddy = {
       virtualHosts = {
         "auth.chrayed.de" = {
