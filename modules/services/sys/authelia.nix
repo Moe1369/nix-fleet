@@ -40,7 +40,7 @@
         authentication_backend.ldap = {
           implementation = "custom";
           address = "ldap://127.0.0.1:3890";
-          base_dn = "dc=example,dc=com";
+          base_dn = "dc=chrayed,dc=de";
           username_attribute = "uid";
           additional_users_dn = "ou=people";
           users_filter = "(&({username_attribute}={input})(objectClass=person))";
@@ -54,7 +54,7 @@
 
         session = {
           name = "authelia_session";
-          domain = "example.com";
+          domain = "auth.chrayed.de";
           expiration = "1h";
           inactivity = "5m";
           remember_me_duration = "1M";
@@ -107,6 +107,15 @@
       environment = {
         LLDAP_JWT_SECRET_FILE      = config.sops.secrets."services/authelia/lldap-jwt-secret".path;
         LLDAP_LDAP_USER_PASS_FILE  = config.sops.secrets."services/authelia/lldap-admin-password".path;
+      };
+    };
+    services.caddy = {
+      virtualHosts = {
+        "auth.chrayed.de" = {
+          extraConfig = ''
+            reverse_proxy localhost:9091
+          '';
+        };
       };
     };
   };
