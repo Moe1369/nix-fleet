@@ -1,6 +1,11 @@
 { ... }: {
   flake.nixosModules.services-sys-authelia = { config, ... }: {
     users.groups.lldap = {};
+    users.users.lldap = {
+      isSystemUser = true;
+      group = "lldap";
+   };
+
     sops.secrets."services/authelia/jwt-secret" = {
       owner = "authelia-main";
     };
