@@ -54,7 +54,7 @@
           group_name_attribute = "cn";
           mail_attribute = "mail";
           display_name_attribute = "displayName";
-          user = "uid=authelia,ou=people,dc=chrayed,dc=de";
+          user = "uid=admin,ou=people,dc=chrayed,dc=de";
         };
         session = {
           name = "authelia_session";
