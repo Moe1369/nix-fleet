@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.gaming-sys-jovian = { inputs,user ... }:{
+  flake.nixosModules.gaming-sys-jovian = { inputs,user, ... }:{
     imports = [ inputs.jovian-nixos.nixosModules.default ];
     jovian.steam.enable = true;
     jovian.decky-loader.enable = true;
