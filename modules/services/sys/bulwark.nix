@@ -1,5 +1,6 @@
 { ... }: {
   flake.nixosModules.services-sys-bulwark = { config, lib, ... }: {
+    sops.secrets."services/bulwark/env" = {};
     virtualisation.oci-containers.containers."bulwark-webmail" = {
       image = "ghcr.io/bulwarkmail/webmail:latest";
       environment = {
