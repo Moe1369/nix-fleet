@@ -7,6 +7,7 @@
     jovian.decky-loader.user = user;
     jovian.devices.steamdeck.autoUpdate = false;
     jovian.steam.autoStart = true;
+    jovian.steamos.enableHdmiCecIntegration = true;
     jovian.devices.steamdeck.enable = false; 
     jovian.steam.user = user;
     jovian.steam.desktopSession = "plasma";
