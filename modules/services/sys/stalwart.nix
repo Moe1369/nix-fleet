@@ -16,12 +16,12 @@
         "admin" = "%{file:${config.sops.secrets."services/stalwart/adminpass".path}}%";
       };
       settings = {
-        http.use-x-forwarded = true;
-        http.url = "https://mailadmin.chrayed.de";
+        server.http.use-x-forwarded = true;
+        server.http.url = "'https://mailadmin.chrayed.de'";
         server.hostname = "mailadmin.chrayed.de";
-        http.allowed-hosts = [ "mailadmin.chrayed.de" ];
-        http.cors.allowed-origins = [ "https://mail.chrayed.de" ];
-        http.permissive-cors = true;
+        server.http.allowed-hosts = [ "mailadmin.chrayed.de" ];
+        server.http.cors.allowed-origins = [ "https://mail.chrayed.de" ];
+        server.http.permissive-cors = true;
 
         authentication.fallback-admin = {
           user = "admin";
