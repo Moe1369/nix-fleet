@@ -5,9 +5,9 @@
     jovian.decky-loader.enable = true;
     jovian.decky-loader.stateDir = "/var/lib/decky-loader";
     jovian.decky-loader.user = user;
-    jovian.devices.steamdeck.autoUpdate = true;
+    jovian.devices.steamdeck.autoUpdate = false;
     jovian.steam.autoStart = true;
-    jovian.devices.steamdeck.enable = true; 
+    jovian.devices.steamdeck.enable = false; 
     jovian.steam.user = user;
     jovian.steam.desktopSession = "plasma";
     services.displayManager.sddm.wayland.enable = true;
