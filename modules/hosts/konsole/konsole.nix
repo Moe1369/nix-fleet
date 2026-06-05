@@ -13,6 +13,7 @@
       desktop-sys-group
       disks-sys-singledisk-encrypted
       gaming-sys-controller
+      gaming-sys-lact
       gaming-sys-jovian
       kde-sys-plasma
       kde-sys-plasma-apps
