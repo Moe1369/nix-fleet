@@ -11,8 +11,8 @@
     programs.zsh.shellAliases = {
       rebuild-from-gitea = "sudo nixos-rebuild switch --refresh --flake git+https://gitea.chrayed.de/Chrayed/nix-fleet#${host}";
       rebuild = "sudo nixos-rebuild switch --refresh --flake github:Moe1369/nix-fleet#${host}";
-      konsole = "sudo nixos-rebuild switch --refresh --flake github:Moe1369/nix-fleet#konsole";
-      computer-mo = "sudo nixos-rebuild switch --refresh --flake github:Moe1369/nix-fleet#computer-mo";
+      konsole = "sudo nixos-rebuild boot --refresh --flake github:Moe1369/nix-fleet#konsole";
+      computer-mo = "sudo nixos-rebuild boot --refresh --flake github:Moe1369/nix-fleet#computer-mo";
     };
   };
 }
