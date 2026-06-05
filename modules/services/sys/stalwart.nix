@@ -17,12 +17,6 @@
           user = "admin";
           secret = "%{file:${config.sops.secrets."services/stalwart/adminpass".path}}%";
         };
-        auth.oauth."kanidm" = {
-          type = "oidc";
-          issuer = "https://auth.chrayed.de/oauth2/openid/stalwart";
-          client-id = "stalwart";
-          client-secret = "%{file:${config.sops.secrets."services/stalwart/oauth2-stalwart-secret".path}}%";
-        };
         server.listener = {
           smtp = {
             bind = [ "0.0.0.0:25" ];
