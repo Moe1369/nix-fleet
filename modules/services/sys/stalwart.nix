@@ -6,7 +6,7 @@
     sops.secrets."services/stalwart/oauth-secret" = {
       owner = "stalwart-mail";
     };
-    systemd.services.stalwart-mail.environment = {
+    systemd.services.stalwart.environment = {
       STALWART_PUBLIC_URL = "https://mailadmin.chrayed.de";
     };
     services.stalwart = {
