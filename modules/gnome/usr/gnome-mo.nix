@@ -38,6 +38,9 @@
         open-new-window-application-9 = [];
         toggle-message-tray = ["<Super>N"];
       };
+      "org/gnome/desktop/wm/preferences" = {
+        button-layout = ["appmenu:minimize,close"];
+      };      
       "org/gnome/settings-daemon/plugins/media-keys" = {
         help = [];
         home = ["<Super>E"];
