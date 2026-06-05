@@ -11,7 +11,7 @@
       apps-sys-vesktop
       base-sys-group
       desktop-sys-group
-      disks-sys-singledisk-unencrypted
+      disks-sys-singledisk-encrypted
       gaming-sys-controller
       gaming-sys-jovian
       kde-sys-plasma
