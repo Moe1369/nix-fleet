@@ -56,7 +56,12 @@
             protocol     = "imap";
             tls.implicit = true;
           };
-          http = {
+          jmap = {
+            bind = "[::]:8080";
+            url = "https://mailadmin.chrayed.de";
+            protocol = "http";
+          };
+          management = {
             bind     = [ "127.0.0.1:8080" ];
             protocol = "http";
           };
