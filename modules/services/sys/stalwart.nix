@@ -17,7 +17,7 @@
       };
       settings = {
         server.http.use-x-forwarded = true;
-        server.http.url = "https://mailadmin.chrayed.de";
+        http.url = "https://mailadmin.chrayed.de";
         server.hostname = "mailadmin.chrayed.de";
         server.http.allowed-hosts = [ "mailadmin.chrayed.de" ];
         server.http.cors.allowed-origins = [ "https://mail.chrayed.de" ];
