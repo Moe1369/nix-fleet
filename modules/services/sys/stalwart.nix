@@ -13,6 +13,7 @@
         "admin" = "%{file:${config.sops.secrets."services/stalwart/adminpass".path}}%";
       };
       settings = {
+        server.url = "https://mailadmin.chrayed.de";
         server.http.allowed-hosts = [ "mailadmin.chrayed.de" ];
         server.http.cors.allowed-origins = [ "https://mail.chrayed.de" ];
         server.http.permissive-cors = true;
