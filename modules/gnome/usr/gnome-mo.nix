@@ -40,7 +40,7 @@
       };
       "org/gnome/desktop/wm/preferences" = {
         button-layout = "appmenu:minimize,close";
-      };      
+      }; 
       "org/gnome/settings-daemon/plugins/media-keys" = {
         help = [];
         home = ["<Super>E"];
@@ -113,12 +113,10 @@
         dynamic-workspaces = true;
       };
       "org/gnome/desktop/interface" = {
-        font-name = "IBM Plex Sans 11";
-        document-font-name = "IBM Plex Sans 11";
-        monospace-font-name = "IBM Plex Mono 11";
         gtk-theme = "adw-gtk3";
         enable-hot-corners = false;
         cursor-theme = "Adwaita";
+        icon-theme = "Adwaita";
       };
       "org/gnome/shell/extensions/rounded-window-corners-reborn" = {
         border-width = -2;
@@ -130,6 +128,10 @@
       };
       "org/gnome/shell/extensions/clipboard-indicator" = {
         toggle-menu = ["<Super>V"];
+      };
+      "org/gnome/shell/extensions/dash-to-dock" = {
+        shortcut = [""];
+        shortcut-text = [""];
       };
       "org/gnome/desktop/background" = {
         color-shading-type = "solid";
