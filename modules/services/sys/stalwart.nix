@@ -62,7 +62,7 @@
             protocol = "http";
           };
           management = {
-            bind     = [ "127.0.0.1:8081" ];
+            bind     = [ "127.0.0.1:8080" ];
             protocol = "http";
           };
         };
