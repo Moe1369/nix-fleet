@@ -70,7 +70,11 @@
         };
       };
     };
-
+    services.caddy.virtualHosts."mailadmin.chrayed.de" = {
+      extraConfig = ''
+        reverse_proxy localhost:8080
+      '';
+    };
     networking.firewall.allowedTCPPorts = [ 25 465 587 143 993 ];
   };
 }
