@@ -22,7 +22,7 @@
       security-sys-sopsnix
       users-sys-mo
     ];
-    home-manager.users.konsole.imports = with config.flake.homeModules; [
+    home-manager.users.mo.imports = with config.flake.homeModules; [
       apps-usr-vesktop
       base-usr-group
       gaming-usr-steam
