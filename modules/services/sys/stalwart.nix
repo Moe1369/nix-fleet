@@ -6,9 +6,9 @@
     sops.secrets."services/stalwart/oauth-secret" = {
       owner = "stalwart-mail";
     };
-    systemd.services.stalwart.environment = {
-      STALWART_PUBLIC_URL = "https://mailadmin.chrayed.de";
-    };
+    #systemd.services.stalwart.environment = {
+    #  STALWART_PUBLIC_URL = "https://mailadmin.chrayed.de";
+    #};
     services.stalwart = {
       stateVersion = "2.0";
       enable = true;
@@ -16,6 +16,8 @@
         "admin" = "%{file:${config.sops.secrets."services/stalwart/adminpass".path}}%";
       };
       settings = {
+        server.http.use-x-forwarded = true;
+        server.http.url = "https://mailadmin.chrayed.de";
         server.hostname = "mailadmin.chrayed.de";
         server.http.allowed-hosts = [ "mailadmin.chrayed.de" ];
         server.http.cors.allowed-origins = [ "https://mail.chrayed.de" ];
@@ -58,7 +60,6 @@
           };
           jmap = {
             bind = "[::]:8080";
-            url = "https://mailadmin.chrayed.de";
             protocol = "http";
           };
           management = {
