@@ -16,6 +16,7 @@
       gaming-sys-jovian
       kde-sys-plasma
       kde-sys-plasma-apps
+      kde-sys-sddm
       platform-sys-cache
       platform-sys-upgrades
       security-sys-sopsnix
