@@ -12,6 +12,7 @@
       settings = {
         server.http.allowed-hosts = [ "mail.chrayed.de" ];
         server.http.cors.allowed-origins = [ "https://mail.chrayed.de" ];
+        server.http.permissive-cors = true;
         authentication.fallback-admin = {
           user = "admin";
           secret = "%{file:${config.sops.secrets."services/stalwart/adminpass".path}}%";
