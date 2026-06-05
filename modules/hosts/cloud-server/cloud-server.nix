@@ -12,6 +12,7 @@
       platform-sys-cache
       platform-sys-upgrades
       security-sys-sopsnix
+      services-sys-bulwark
       services-sys-caddy
       services-sys-stalwart
       users-sys-administrator
