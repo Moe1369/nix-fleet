@@ -1,11 +1,11 @@
 { inputs, config, ... }: {
-  flake.nixosConfigurations."deck" = inputs.self.lib.mkHost {
+  flake.nixosConfigurations."konsole" = inputs.self.lib.mkHost {
     system = "x86_64-linux";
-    host   = "deck";
-    user   = "deck";
+    host   = "konsole";
+    user   = "mo";
   };
 
-  flake.nixosModules.deck = { system, ... }: {
+  flake.nixosModules.konsole = { system, ... }: {
     imports = with inputs.self.nixosModules; [
       apps-sys-chrome
       apps-sys-vesktop
@@ -19,14 +19,14 @@
       platform-sys-cache
       platform-sys-upgrades
       security-sys-sopsnix
-      users-sys-deck
+      users-sys-mo
     ];
-    home-manager.users.deck.imports = with config.flake.homeModules; [
+    home-manager.users.konsole.imports = with config.flake.homeModules; [
       apps-usr-vesktop
       base-usr-group
       gaming-usr-steam
       gaming-usr-jovian
-      kde-usr-plasma-deck
+      kde-usr-plasma-konsole
       security-usr-sopsnix
     ];
 
