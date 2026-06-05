@@ -3,9 +3,6 @@
     sops.secrets."services/stalwart/adminpass" = {
       owner = "stalwart-mail";
     };
-    sops.secrets."services/stalwart/oauth2-stalwart-secret" = {
-      owner = "stalwart-mail";
-    };
     services.stalwart = {
       stateVersion = "2.0";
       enable = true;
