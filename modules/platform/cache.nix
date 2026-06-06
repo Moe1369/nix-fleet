@@ -5,6 +5,9 @@
       mode = "0400";
       owner = "root";
     };
+    sops.secrets."ssh/nixbuild/known-hosts" = {
+      mode = "0444";
+    };
     sops.secrets."ssh/nixbuild/private" = {
       path = "/root/.ssh/nixbuild";
       mode = "0400";
