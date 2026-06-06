@@ -18,10 +18,10 @@
         IPQoS throughput
     '';
 
-    programs.ssh.knownHosts.nixbuild = {
-      hostNames = [ "eu.nixbuild.net" ];
-      publicKeyFile = config.sops.secrets."ssh/nixbuild/public".path;
-    };
+    #programs.ssh.knownHosts.nixbuild = {
+    #  hostNames = [ "eu.nixbuild.net" ];
+    #  publicKeyFile = config.sops.secrets."ssh/nixbuild/public".path;
+    #};
 
     nix = {
       distributedBuilds = true;
