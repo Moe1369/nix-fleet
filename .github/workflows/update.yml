@@ -39,7 +39,8 @@ jobs:
       - uses: DeterminateSystems/nix-installer-action@main
       - uses: nixbuild/nixbuild-action@v24
         with:
-          nixbuild_token: ${{ secrets.nixbuild_token }}
+          nixbuild_token: ${{ secrets.NIXBUILD_TOKEN }}
+          nixbuild_ssh_key: ${{ secrets.NIXBUILD_SSH_KEY }}
       - name: Build ${{ matrix.host }}
         run: |
           nix build .#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel
