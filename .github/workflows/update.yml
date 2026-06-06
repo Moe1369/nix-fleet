@@ -21,8 +21,25 @@ jobs:
           git add flake.lock
           git commit -m "flake: update inputs" || echo "No changes to commit"
           git push
+
   build:
     needs: update
-    uses: nixbuild/nixbuild-action/.github/workflows/ci-workflow.yml@v24
-    secrets:
-      nixbuild_token: ${{ secrets.nixbuild_token }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        host:
+          - computer-mo
+          - konsole
+          - computer-nadine
+          - cloud-server
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: nixbuild/nixbuild-action@v24
+        with:
+          nixbuild_token: ${{ secrets.nixbuild_token }}
+      - name: Build ${{ matrix.host }}
+        run: |
+          nix build .#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel
