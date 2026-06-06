@@ -17,12 +17,14 @@
         ServerAliveInterval 60
         IPQoS throughput
     '';
-
-    #programs.ssh.knownHosts.nixbuild = {
-    #  hostNames = [ "eu.nixbuild.net" ];
-    #  publicKeyFile = config.sops.secrets."ssh/nixbuild/public".path;
-    #};
-
+    system.activationScripts.nixbuildKnownHost = {
+      deps = [ "setupSecrets" ];
+      text = ''
+        known=$(cat ${config.sops.secrets."ssh/nixbuild/known-hosts".path})
+        grep -qF "eu.nixbuild.net" /root/.ssh/known_hosts 2>/dev/null || \
+          echo "eu.nixbuild.net $known" >> /root/.ssh/known_hosts
+      '';
+    };
     nix = {
       distributedBuilds = true;
       buildMachines = [
