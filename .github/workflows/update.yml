@@ -21,3 +21,8 @@ jobs:
           git add flake.lock
           git commit -m "flake: update inputs" || echo "No changes to commit"
           git push
+  build:
+    needs: update
+    uses: nixbuild/nixbuild-action/.github/workflows/ci-workflow.yml@v24
+    secrets:
+      nixbuild_token: ${{ secrets.nixbuild_token }}
