@@ -14,6 +14,14 @@
       path = "${config.home.homeDirectory}/.ssh/extern";
       mode = "0600";
     };
+    sops.secrets."ssh/nixbuild/public" = {
+      path = "${config.home.homeDirectory}/.ssh/nixbuild.pub";
+      mode = "0600";
+    };
+    sops.secrets."ssh/nixbuild/private" = {
+      path = "${config.home.homeDirectory}/.ssh/nixbuild";
+      mode = "0600";
+    };
     programs.ssh = {
       enable = true;
       enableDefaultConfig = false;
@@ -22,6 +30,7 @@
           identityFile = [
             "${config.home.homeDirectory}/.ssh/intern"
             "${config.home.homeDirectory}/.ssh/extern"
+            "${config.home.homeDirectory}/.ssh/nixbuild"
           ];
         };
       };
