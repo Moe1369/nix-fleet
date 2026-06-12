@@ -1,4 +1,4 @@
-name: Update flake inputs
+name: Update & Build Systems
 on:
   schedule:
     - cron: '0 23 * * *'
