@@ -25,7 +25,6 @@ modules/
 ├── gnome/         # GNOME system modules & per-user config
 ├── hosts/         # Per-host nixosConfiguration entry points
 ├── hypervisor/    # Virtualisation
-├── hyprland/      # Hyprland
 ├── kde/           # KDE Plasma system modules & per-user config
 ├── platform/      # Cross-cutting concerns (Nix cache, auto-upgrades, mkHost)
 ├── security/      # Secure Boot (lanzaboote), sops-nix, secrets
@@ -46,7 +45,6 @@ modules/
 | `lanzaboote` | Secure Boot |
 | `plasma-manager` | KDE Plasma config via home-manager |
 | `jovian-nixos` | Steam Deck support |
-| `caelestia-shell` | Hyprland shell (experimental) |
 | `import-tree` | Auto-import of the module tree |
 
 ## Secrets
