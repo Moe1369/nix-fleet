@@ -33,13 +33,11 @@ jobs:
           - computer-nadine
           - cloud-server
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: actions/checkout@v3
+      - uses: nixbuild/nix-quick-install-action@v34
       - uses: nixbuild/nixbuild-action@v24
         with:
-          nixbuild_token: ${{ secrets.NIXBUILD_TOKEN }}
+          nixbuild_token: ${{ secrets.nixbuild_token }}
       - name: Build ${{ matrix.host }}
         run: |
           nix build .#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel
