@@ -168,7 +168,6 @@
           "middleclickclose@paolo.tranquilli.gmail.com"
           "nightthemeswitcher@romainvigier.fr"
           "rounded-window-corners@fxgn"
-          "tinted-shell@pakovm"
           "quick-settings-audio-panel@rayzeq.github.io"
           "quicksettings-audio-devices-renamer@marcinjahn.com"
           "quicksettings-audio-devices-hider@marcinjahn.com"
