@@ -32,7 +32,6 @@
       hypervisor-sys-virtualization
     ];
     home-manager.users.mo.imports = with config.flake.homeModules; [
-      apps-usr-onepassword
       apps-usr-vesktop
       base-usr-group
       gaming-usr-steam
