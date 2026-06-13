@@ -26,6 +26,19 @@
       file:///home/mo/Vorlagen Vorlagen
    '';
     dconf.settings = {
+      "org/freedesktop/tracker/miner/files" = {
+        index-recursive-directories = [
+          "&DESKTOP"
+          "&DOCUMENTS"
+          "&DOWNLOAD"
+          "&MUSIC"
+          "&PICTURES"
+          "&PUBLIC_SHARE"
+          "&TEMPLATES"
+          "&VIDEOS"
+          "/home/mo/Code"
+       ];
+      };
       "org/gnome/shell/keybindings" = {
         focus-active-notification = [];
         open-new-window-application-1 = [];
