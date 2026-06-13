@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  flake.nixosModules.kde-sys-plasma-apps = { pkgs, pkgs-unstable, ... }:
+  flake.nixosModules.kde-sys-plasma-apps = { pkgs, ... }:
   {
     environment.systemPackages = with pkgs; [
       adwaita-fonts
