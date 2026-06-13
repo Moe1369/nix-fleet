@@ -173,6 +173,8 @@
           "quicksettings-audio-devices-hider@marcinjahn.com"
           "dash-to-dock@micxgx.gmail.com" 
           "dynamic-music-pill@andbal"
+          # Imported manually. No package yet
+          "user-accent-colors@fabito02"
         ];
       };
     };
