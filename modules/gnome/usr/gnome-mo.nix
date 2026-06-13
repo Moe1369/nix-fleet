@@ -79,7 +79,10 @@
         move-to-monitor-left = [];
         move-to-monitor-right = [];
         move-to-monitor-up = [];
-        move-to-workspace-1 = [];
+        move-to-workspace-1 = ["Muhenkan"];
+        move-to-workspace-2 = ["Hangul_Hanja"];
+        move-to-workspace-3 = ["Hangul"];
+        move-to-workspace-3 = ["Henkan"];
         move-to-workspace-down = [];
         move-to-workspace-last = [];
         move-to-workspace-left = [];
