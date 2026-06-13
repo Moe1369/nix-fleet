@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.nixosModules.security-sys-secureboot = { lib, ... }: {
+  flake.nixosModules.security-sys-secureboot = { pkgs, lib, ... }: {
     imports = [
       inputs.lanzaboote.nixosModules.lanzaboote
     ];
