@@ -2,6 +2,7 @@
   flake.homeModules.gnome-usr-gnome-mo = { config, pkgs, ... }: {
     xdg.userDirs = {
       enable = true;
+      setSessionVariables = true;
       createDirectories = true;
       desktop = "${config.home.homeDirectory}/Schreibtisch";
       download = "${config.home.homeDirectory}/Downloads";

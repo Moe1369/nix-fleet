@@ -5,6 +5,7 @@
   
     xdg.userDirs = {
       enable = true;
+      setSessionVariables = true;
       createDirectories = true;
       desktop = "${config.home.homeDirectory}/Desktop";
       download = "${config.home.homeDirectory}/Downloads";
