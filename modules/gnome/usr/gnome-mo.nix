@@ -28,6 +28,7 @@
     dconf.settings = {
       "org/freedesktop/tracker/miner/files" = {
         index-recursive-directories = [
+          "$HOME"
           "&DESKTOP"
           "&DOCUMENTS"
           "&DOWNLOAD"
