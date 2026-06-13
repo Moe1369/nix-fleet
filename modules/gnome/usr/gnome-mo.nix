@@ -134,7 +134,7 @@
         gtk-theme = "adw-gtk3";
         enable-hot-corners = false;
         cursor-theme = "Adwaita";
-        icon-theme = "Adwaita";
+        icon-theme = "MoreWaita";
       };
       "org/gnome/shell/extensions/rounded-window-corners-reborn" = {
         border-width = -2;
