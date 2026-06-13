@@ -29,7 +29,7 @@
       base-usr-group
       gaming-usr-steam
       gaming-usr-jovian
-      kde-usr-plasma-konsole
+      kde-usr-plasma-mo
       security-usr-sopsnix
     ];
 
