@@ -7,8 +7,9 @@
 
   flake.nixosModules.konsole = { system, ... }: {
     imports = with inputs.self.nixosModules; [
-      apps-sys-chrome
+      apps-sys-brave
       apps-sys-vesktop
+      apps-sys-protonsuite
       base-sys-group
       desktop-sys-group
       disks-sys-singledisk-encrypted
