@@ -20,7 +20,7 @@
     xdg.desktopEntries.rebuild-computer-mo = {
       name = "Computer";
       comment = ''Rebuild NixOS for host "computer-mo"'';
-      exec = ''sudo nixos-rebuild boot --refresh --flake github:Moe1369/nix-fleet#computer-mo'';
+      exec = ''sudo nixos-rebuild boot --refresh --flake "github:Moe1369/nix-fleet\#computer-mo"'';
       icon = "computer";
       terminal = false;
       categories = [ "System" ];
