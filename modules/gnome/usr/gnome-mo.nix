@@ -13,6 +13,14 @@
       pictures = "${config.home.homeDirectory}/Bilder";
       videos = "${config.home.homeDirectory}/Videos";
     };
+   xdg.desktopEntries.rebuild-konsole = {
+     name = "Rebuild Konsole";
+     comment = ''Rebuild NixOS for host "konsole"'';
+     exec = ''sh -c 'notify-send "NixOS Rebuild" "konsole: build started…" --icon=system-software-update --hint=int:transient:1 && pkexec nixos-rebuild boot --refresh --flake github:Moe1369/nix-fleet#konsole && notify-send "NixOS Rebuild" "konsole: build succeeded ✓" --icon=system-software-update || notify-send "NixOS Rebuild" "konsole: build FAILED ✗" --icon=dialog-error --urgency=critical' '';
+     icon = "applications-games";
+     terminal = false;
+     categories = [ "System" ];
+   };
     home.file."Code/.directory".source = ./dotfiles/code-folder;
     home.file.".config/gtk-3.0/bookmarks".text = ''
       file:///home/mo/Bilder Bilder
