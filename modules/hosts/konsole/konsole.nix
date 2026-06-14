@@ -22,6 +22,7 @@
       platform-sys-upgrades
       security-sys-sopsnix
       security-sys-secureboot
+      security-sys-sudo
       users-sys-mo
     ];
     home-manager.users.mo.imports = with config.flake.homeModules; [
