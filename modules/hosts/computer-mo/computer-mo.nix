@@ -28,6 +28,7 @@
       platform-sys-upgrades
       security-sys-secureboot
       security-sys-sopsnix
+      security-sys-sudo
       users-sys-mo
       hypervisor-sys-virtualization
     ];
