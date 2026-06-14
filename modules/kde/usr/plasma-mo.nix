@@ -17,6 +17,15 @@
       videos = "${config.home.homeDirectory}/Videos";
     };
     
+    xdg.desktopEntries.rebuild-computer-mo = {
+      name = "Computer";
+      comment = ''Rebuild NixOS for host "computer-mo"'';
+      exec = ''sh -c "notify-send 'NixOS Rebuild' 'computer-mo: build started…' --icon=system-software-update --hint=int:transient:1 && pkexec nixos-rebuild boot --refresh --flake github:Moe1369/nix-fleet#computer-mo && notify-send 'NixOS Rebuild' 'computer-mo: build succeeded ✓' --icon=system-software-update || notify-send 'NixOS Rebuild' 'computer-mo: build FAILED ✗' --icon=dialog-error --urgency=critical"'';
+      icon = "computer";
+      terminal = false;
+      categories = [ "System" ];
+    };
+
     imports = [ inputs.plasma-manager.homeModules.plasma-manager ];
     home.file."Code/.directory".source = ./dotfiles/code-folder;
     home.file.".config/haruna/haruna.conf".source = ./dotfiles/haruna-config;

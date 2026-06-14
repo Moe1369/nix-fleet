@@ -14,8 +14,8 @@
       videos = "${config.home.homeDirectory}/Videos";
     };
     xdg.desktopEntries.rebuild-konsole = {
-      name = "Rebuild Konsole";
-      comment = ''Rebuild NixOS for host "konsole"'';
+      name = "Konsole";
+      comment = ''NixOS Wechsel zu "konsole"'';
       exec = ''sh -c "notify-send 'NixOS Rebuild' 'konsole: build started…' --icon=system-software-update --hint=int:transient:1 && pkexec nixos-rebuild boot --refresh --flake github:Moe1369/nix-fleet#konsole && notify-send 'NixOS Rebuild' 'konsole: build succeeded ✓' --icon=system-software-update || notify-send 'NixOS Rebuild' 'konsole: build FAILED ✗' --icon=dialog-error --urgency=critical"'';
       icon = "applications-games";
       terminal = false;
