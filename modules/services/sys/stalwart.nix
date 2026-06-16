@@ -7,7 +7,7 @@
       owner = "root";
     };
     virtualisation.oci-containers.containers."stalwart-mail" = {
-      image = "stalwartlabs/mail-server:latest";
+      image = "stalwartlabs/stalwart:latest";
       environment = {
         STALWART_PUBLIC_URL = "https://mailadmin.chrayed.de";
       };
