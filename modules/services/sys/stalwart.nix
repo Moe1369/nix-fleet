@@ -9,7 +9,7 @@
     virtualisation.oci-containers.containers."stalwart-mail" = {
       image = "stalwartlabs/stalwart:latest";
       environment = {
-        STALWART_PUBLIC_URL = "https://mailadmin.chrayed.de";
+        STALWART_PUBLIC_URL = "https://mail.chrayed.de";
       };
       ports = [
         "0.0.0.0:25:25"
@@ -20,14 +20,13 @@
         "127.0.0.1:8080:8080"
       ];
       volumes = [
-        "stalwart-data:/opt/stalwart-mail/data"
-        "stalwart-etc:/opt/stalwart-mail/etc"
-        "stalwart-logs:/opt/stalwart-mail/logs"
+        "stalwart-data:/var/lib/stalwart"
+        "stalwart-etc:/etc/stalwart"
         "${config.sops.secrets."services/stalwart/adminpass".path}:/run/secrets/adminpass:ro"
         "${config.sops.secrets."services/stalwart/oauth-secret".path}:/run/secrets/oauth_secret:ro"
       ];
     };
-    services.caddy.virtualHosts."mailadmin.chrayed.de" = {
+    services.caddy.virtualHosts."mail.chrayed.de" = {
       extraConfig = ''
         reverse_proxy localhost:8080
       '';

@@ -14,15 +14,12 @@
       ];
       ports   = [ "127.0.0.1:3000:3000" ];
       volumes = [
-        "bulwark-settings:/app/data/settings"
-        "bulwark-admin:/app/data/admin"
-        "bulwark-admin-state:/app/data/admin-state"
-        "bulwark-telemetry:/app/data/telemetry"
+        "bulwark-data:/app/data"
         "${config.sops.secrets."services/bulwark/oauth-secret".path}:/run/secrets/oauth_secret:ro"
       ];
     };
 
-    services.caddy.virtualHosts."mail.chrayed.de" = {
+    services.caddy.virtualHosts."webmail.chrayed.de" = {
       extraConfig = ''
         reverse_proxy localhost:3000
       '';
