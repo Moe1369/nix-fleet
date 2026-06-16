@@ -1,82 +1,31 @@
 { ... }: {
-  flake.nixosModules.services-sys-stalwart = { config, ... }: {
+  flake.nixosModules.services-sys-stalwart = { config, lib, ... }: {
     sops.secrets."services/stalwart/adminpass" = {
       owner = "stalwart-mail";
     };
     sops.secrets."services/stalwart/oauth-secret" = {
       owner = "stalwart-mail";
     };
-    systemd.services.stalwart.environment = {
-      STALWART_PUBLIC_URL = "https://mailadmin.chrayed.de";
-    };
-    services.stalwart = {
-      stateVersion = "2.0";
-      enable = true;
-      credentials = {
-        "admin" = "%{file:${config.sops.secrets."services/stalwart/adminpass".path}}%";
+    virtualisation.oci-containers.containers."stalwart-mail" = {
+      image = "stalwartlabs/mail-server:latest";
+      environment = {
+        STALWART_PUBLIC_URL = "https://mailadmin.chrayed.de";
       };
-      settings = {
-        server.http.use-x-forwarded = true;
-        server.hostname = "mailadmin.chrayed.de";
-        server.http.allowed-hosts = [ "mailadmin.chrayed.de" ];
-        server.http.cors.allowed-origins = [ "https://mail.chrayed.de" ];
-        server.http.permissive-cors = true;
-
-        authentication.fallback-admin = {
-          user = "admin";
-          secret = "%{file:${config.sops.secrets."services/stalwart/adminpass".path}}%";
-        };
-
-        oauth.client.bulwark = {
-          name          = "Bulwark Webmail";
-          secret        = "%{file:${config.sops.secrets."services/stalwart/oauth-secret".path}}%";
-          redirect-uris = [ "https://mail.chrayed.de/auth/callback" ];
-          grants        = [ "authorization_code" "refresh_token" ];
-        };
-
-        server.listener = {
-          smtp = {
-            bind     = [ "0.0.0.0:25" ];
-            protocol = "smtp";
-          };
-          submission = {
-            bind     = [ "0.0.0.0:587" ];
-            protocol = "smtp";
-          };
-          submissions = {
-            bind         = [ "0.0.0.0:465" ];
-            protocol     = "smtp";
-            tls.implicit = true;
-          };
-          imap = {
-            bind     = [ "0.0.0.0:143" ];
-            protocol = "imap";
-          };
-          imaps = {
-            bind         = [ "0.0.0.0:993" ];
-            protocol     = "imap";
-            tls.implicit = true;
-          };
-          jmap = {
-            bind = "[::]:8080";
-            protocol = "http";
-          };
-          management = {
-            bind     = [ "127.0.0.1:8080" ];
-            protocol = "http";
-          };
-        };
-
-        storage.data   = "rocksdb";
-        storage.fts    = "rocksdb";
-        storage.blob   = "rocksdb";
-        storage.lookup = "rocksdb";
-        store.rocksdb  = {
-          type        = "rocksdb";
-          path        = "/var/lib/stalwart-mail/data";
-          compression = "lz4";
-        };
-      };
+      ports = [
+        "0.0.0.0:25:25"
+        "0.0.0.0:587:587"
+        "0.0.0.0:465:465"
+        "0.0.0.0:143:143"
+        "0.0.0.0:993:993"
+        "127.0.0.1:8080:8080"
+      ];
+      volumes = [
+        "stalwart-data:/opt/stalwart-mail/data"
+        "stalwart-etc:/opt/stalwart-mail/etc"
+        "stalwart-logs:/opt/stalwart-mail/logs"
+        "${config.sops.secrets."services/stalwart/adminpass".path}:/run/secrets/adminpass:ro"
+        "${config.sops.secrets."services/stalwart/oauth-secret".path}:/run/secrets/oauth_secret:ro"
+      ];
     };
     services.caddy.virtualHosts."mailadmin.chrayed.de" = {
       extraConfig = ''
