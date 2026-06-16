@@ -1,10 +1,10 @@
 { ... }: {
   flake.nixosModules.services-sys-stalwart = { config, lib, ... }: {
     sops.secrets."services/stalwart/adminpass" = {
-      owner = "stalwart-mail";
+      owner = "root";
     };
     sops.secrets."services/stalwart/oauth-secret" = {
-      owner = "stalwart-mail";
+      owner = "root";
     };
     virtualisation.oci-containers.containers."stalwart-mail" = {
       image = "stalwartlabs/mail-server:latest";
