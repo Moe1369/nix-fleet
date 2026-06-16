@@ -1,11 +1,6 @@
 { ... }: {
   flake.nixosModules.services-sys-stalwart = { config, lib, ... }: {
-    sops.secrets."services/stalwart/adminpass" = {
-      owner = "root";
-    };
-    sops.secrets."services/stalwart/oauth-secret" = {
-      owner = "root";
-    };
+
     virtualisation.oci-containers.containers."stalwart-mail" = {
       image = "stalwartlabs/stalwart:latest";
       environment = {
@@ -22,8 +17,6 @@
       volumes = [
         "stalwart-data:/var/lib/stalwart"
         "stalwart-etc:/etc/stalwart"
-        "${config.sops.secrets."services/stalwart/adminpass".path}:/run/secrets/adminpass:ro"
-        "${config.sops.secrets."services/stalwart/oauth-secret".path}:/run/secrets/oauth_secret:ro"
       ];
     };
     services.caddy.virtualHosts."mail.chrayed.de" = {
