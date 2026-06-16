@@ -5,7 +5,6 @@
       image = "stalwartlabs/stalwart:v0.16.7";
       environment = {
         STALWART_PUBLIC_URL = "https://mail.chrayed.de";
-        STALWART_RECOVERY_MODE = "1";
       };
       ports = [
         "0.0.0.0:25:25"
