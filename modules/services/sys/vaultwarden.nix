@@ -4,7 +4,7 @@
       image = "vaultwarden/server:1.36.0";
       environment = {
         DOMAIN        = "https://pw.chrayed.de";
-        SIGNUPS_ALLOWED = "true";
+        SIGNUPS_ALLOWED = "false";
         WEBSOCKET_ENABLED = "true";
       };
       ports   = [ "127.0.0.1:8222:80" ];
