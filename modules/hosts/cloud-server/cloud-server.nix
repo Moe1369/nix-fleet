@@ -15,6 +15,7 @@
       services-sys-bulwark
       services-sys-caddy
       services-sys-stalwart
+      services-sys-vaultwarden
       users-sys-administrator
     ];
     
