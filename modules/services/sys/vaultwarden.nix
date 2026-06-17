@@ -7,14 +7,14 @@
         SIGNUPS_ALLOWED = "false";
         WEBSOCKET_ENABLED = "true";
       };
-      ports   = [ "127.0.0.1:8080:80" ];
+      ports   = [ "127.0.0.1:8222:80" ];
       volumes = [
         "vaultwarden-data:/data"
       ];
     };
     services.caddy.virtualHosts."pw.chrayed.de" = {
       extraConfig = ''
-        reverse_proxy localhost:8080
+        reverse_proxy localhost:8222
       '';
     };
   };
