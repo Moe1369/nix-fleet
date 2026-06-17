@@ -3,7 +3,7 @@
     virtualisation.oci-containers.containers."vaultwarden" = {
       image = "vaultwarden/server:1.36.0";
       environment = {
-        DOMAIN        = "https://pw.chrayed.de";
+        DOMAIN        = "https://vault.chrayed.de";
         SIGNUPS_ALLOWED = "false";
         WEBSOCKET_ENABLED = "true";
       };
@@ -12,7 +12,7 @@
         "vaultwarden-data:/data"
       ];
     };
-    services.caddy.virtualHosts."pw.chrayed.de" = {
+    services.caddy.virtualHosts."vault.chrayed.de" = {
       extraConfig = ''
         reverse_proxy localhost:8222
       '';
