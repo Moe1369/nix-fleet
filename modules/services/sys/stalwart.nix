@@ -2,7 +2,7 @@
   flake.nixosModules.services-sys-stalwart = { config, lib, ... }: {
 
     virtualisation.oci-containers.containers."stalwart-mail" = {
-      image = "stalwartlabs/stalwart:v0.16.7";
+      image = "stalwartlabs/stalwart:v0.16.9";
       environment = {
         STALWART_PUBLIC_URL = "https://mail.chrayed.de";
       };
