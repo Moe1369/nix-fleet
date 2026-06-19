@@ -43,17 +43,15 @@
           settings = {
             theme = "dark";
             default_2fa_method = "totp";
-
             server.address = "tcp://0.0.0.0:9091/";
-
             log.level = "info";
-            authentication_backend.ldap = {
-              implementation = "lldap";
-              address = "ldap://127.0.0.1:3890";
-              base_dn = "dc=chrayed,dc=de";
-              user = "uid=admin,ou=people,dc=chrayed,dc=de";
-              password_file = "/run/secrets/lldap-admin-password";
-            };
+            #authentication_backend.ldap = {
+            #  implementation = "lldap";
+            #  address = "ldap://127.0.0.1:3890";
+            #  base_dn = "dc=chrayed,dc=de";
+            #  user = "uid=admin,ou=people,dc=chrayed,dc=de";
+            #  password_file = "/run/secrets/lldap-admin-password";
+            #};
 
             session = {
               name = "authelia_session";
@@ -69,16 +67,6 @@
             storage.local.path = "/var/lib/authelia-main/db.sqlite3";
 
             notifier.filesystem.filename = "/var/lib/authelia-main/notification.txt";
-
-            access_control = {
-              default_policy = "deny";
-              rules = [
-                {
-                  domain = [ "webmail.chrayed.de" "vault.chrayed.de" ];
-                  policy = "two_factor";
-                }
-              ];
-            };
           };
         };
         networking.firewall.allowedTCPPorts = [ 9091 ];
