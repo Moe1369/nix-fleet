@@ -23,6 +23,7 @@
        kando
        impression
        high-tide
+       eyedropper
        morewaita-icon-theme
        gnome-disk-utility
        gnomeExtensions.dynamic-music-pill
