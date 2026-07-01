@@ -11,7 +11,7 @@
       apps-sys-brave
       apps-sys-libreoffice
       apps-sys-bitwarden
-      apps-sys-vesktop
+      #apps-sys-vesktop
       base-sys-group
       desktop-sys-group
       disks-sys-singledisk-encrypted
@@ -33,7 +33,7 @@
       hypervisor-sys-virtualization
     ];
     home-manager.users.mo.imports = with config.flake.homeModules; [
-      apps-usr-vesktop
+      #apps-usr-vesktop
       base-usr-group
       gaming-usr-steam
       gnome-usr-gnome-mo
