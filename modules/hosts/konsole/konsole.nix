@@ -8,7 +8,6 @@
   flake.nixosModules.konsole = { system, ... }: {
     imports = with inputs.self.nixosModules; [
       apps-sys-brave
-      #apps-sys-vesktop
       base-sys-group
       desktop-sys-group
       disks-sys-singledisk-encrypted
@@ -26,7 +25,6 @@
       users-sys-mo
     ];
     home-manager.users.mo.imports = with config.flake.homeModules; [
-      #apps-usr-vesktop
       base-usr-group
       gaming-usr-steam
       gaming-usr-jovian
