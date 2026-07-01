@@ -9,7 +9,7 @@
     imports = with inputs.self.nixosModules; [
       apps-sys-chrome
       apps-sys-libreoffice
-      apps-sys-vesktop
+      #apps-sys-vesktop
       base-sys-group
       desktop-sys-group
       disks-sys-singledisk-encrypted
@@ -26,7 +26,7 @@
       users-sys-nadine
     ];
     home-manager.users.nadine.imports = with config.flake.homeModules; [
-      apps-usr-vesktop
+      #apps-usr-vesktop
       base-usr-group
       gaming-usr-steam
       kde-usr-plasma-nadine
